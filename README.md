@@ -5,7 +5,9 @@ Personal writing on digital art, music theory, programming, design and creative 
 ## Technology
 
 Built with Jekyll
+
 Hosted on GitHub Pages
+
 Markdown-based content
 
 ## Contact
