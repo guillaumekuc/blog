@@ -2,7 +2,7 @@
 layout: post
 title:  "French Creative Industries & the Global Market: Fighting Against the Odds"
 date:   2025-04-21
-categories: jekyll update
+categories:
 published: true
 author: Guillaume Kuc
 ---
