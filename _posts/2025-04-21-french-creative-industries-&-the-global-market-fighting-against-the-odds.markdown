@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "French Creative Industries & the Global Market: Fighting Against the Odds"
 date:   2025-04-21
 categories: jekyll update
