@@ -1,4 +1,6 @@
-# Guillaume Kuc's Blog
+Live Resume: https://guillaumekuc.github.io/blog
+
+## About
 
 Personal writing on digital art, music theory, programming, design and creative work.
 
