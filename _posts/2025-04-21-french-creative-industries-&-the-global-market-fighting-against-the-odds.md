@@ -1,11 +1,19 @@
 ---
-layout: post
-title:  "French Creative Industries & the Global Market: Fighting Against the Odds"
-date:   2025-04-21
+title: "French Creative Industries & the Global Market: Fighting Against the Odds"
+author: guillaumekuc
+date: 2025-04-21
 categories: 
-tags: creative-industries gaming animation french-media cultural-economics global-markets industry-trends
+layout: post
+tags:
+  - creative-industries
+  - gaming
+  - animation
+  - french-media
+  - cultural-economics
+  - global-markets
+  - industry-trends
+permalink: 
 published: true
-author: "guillaumekuc"
 ---
 
 France has an established reputation in gaming and animation with its 120 animation studios and 1200 video game companies [^1]. It is currently the third largest producer of animated films after the USA and Japan. The industry's latest success came out of studio Fortiche with the animated series Arcane produced for Riot Games [^2]. Gaming is not to be forgotten, with France ranking second in the world for the production of video games, with notable success stories such as the Dishonored seires coming our of Arkane studios in Lyon [^3].
