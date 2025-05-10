@@ -5,7 +5,7 @@
 {% if reading_time <= 1 %}
   {% assign reading_time_label = "1 min read" %}
 {% else %}
-  {% assign reading_time_label = reading_time | append: " min" %}
+  {% assign reading_time_label = reading_time | append: " min read" %}
 {% endif %}
 
 <span class="reading-time" title="Estimated read time">
