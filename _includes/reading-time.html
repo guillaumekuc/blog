@@ -1,0 +1,14 @@
+
+{% assign words = content | strip_html | number_of_words %}
+{% assign reading_time = words | divided_by: 225 | plus: 0 %}
+
+{% if reading_time <= 1 %}
+  {% assign reading_time_label = "1 min read" %}
+{% else %}
+  {% assign reading_time_label = reading_time | append: " min" %}
+{% endif %}
+
+<span class="reading-time" title="Estimated read time">
+  <i class="fa-regular fa-clock"></i>
+  {{ reading_time_label }}
+</span>
