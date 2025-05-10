@@ -17,10 +17,16 @@ layout: default
   {% endif %}
 </p>
 
+<p>
+  {% if page.tags %}
+    {% for tag in page.tags %}
+      <small class="tag">#{{ tag }}</small>
+    {% endfor %}
+  {% endif %}
+</p>
+
 <p>{% include reading-time.html %}</p>
 
 {{content}}
 
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %}
+<p><a class="copylink" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Copy Link"><i class="fa-solid fa-link"></i></a></p>

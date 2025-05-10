@@ -3,7 +3,7 @@ layout: post
 title:  "French Creative Industries & the Global Market: Fighting Against the Odds"
 date:   2025-04-21
 categories: 
-tags: creative-industry, gaming, animation, french-media, arts-business, economics, cultural-export, global-competition
+tags: creative-industries gaming animation french-media cultural-economics global-markets industry-trends
 published: true
 author: "guillaumekuc"
 ---
