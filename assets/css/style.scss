@@ -4,25 +4,98 @@
 @import "{{ site.theme }}";
 
 //Your custom CSS rules here
+:root {
+  --primary-color: #267CB9; /* Teal green, replaces the current green */
+  --secondary-color: #e9c46a; /* Warm gold for accents */
+  --text-color: #727272; /* Grey */
+  --title-color: #222; /* Dark grey */
+  --background-color: #fff; /* Light gray background */
+  --border-color: #e5e5e5; /* Medium gray for borders */
+  --light-color: #ffffff; /* White for contrast elements */
+  --hover-color: #1a7c71; /* Darker version of primary for hover states */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+} 
+
+header {
+  display: grid;
+  justify-content: center;
+}
+
 header img {
   display: block;
   margin: auto;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border-color: white;
   object-fit: cover;
   margin-bottom:15px;
-  border:2px solid white;
+  border:2px solid var(--title-color);
+
 }
 
 header h1 {
-  margin: 10px 0;
   display:block;
-  font-size:28px;
   text-align: center;
-  width:100%;
+  margin:0 !important;
+  margin-bottom: 15px;
+  
+
 }
 header p {
   text-align: center;
+
+}
+.search-input {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+
+#search-input {
+  display:grid;
+  justify-content: center;
+  margin:auto;
+  width:200px;
+  border-radius:5px;
+  border-width: 1px;
+  padding: 5px;
+}
+
+
+.search-input text {
+  margin-bottom: 15px;
+}
+
+#search-input {
+  margin-bottom: 25px;
+}
+
+.search-input li {
+  list-style-type: none
+}
+
+#results-container {
+  text-align: left;
+}
+
+
+.social-links {
+
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+.social-link i {
+  margin-right: 8px;
+  font-size: 24px;
+  transition: transform 0.2s;
+
+}
+
+.social-link i:hover {
+  transform: scale(1.1);
 }

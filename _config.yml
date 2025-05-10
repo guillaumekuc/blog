@@ -24,8 +24,46 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://guillaumekuc.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /assets/img/profilePic.jpg
-twitter_username: 
-github_username:  guillaumekuc
+
+socials:
+  - social:
+      title: "Portfolio"
+      url: "https://guillaumekuc.art"
+      icon: "fa-solid fa-palette"
+      alt: "Portfolio"
+  - social:
+      title: "ArtStation"
+      icon: "fa-brands fa-artstation"
+      url: "https://artstation.com/guillaumekuc"
+      alt: "ArtStation"
+  - social:
+      title: "SoundCloud"
+      icon: "fa-brands fa-soundcloud"
+      url: "https://soundcloud.com/guillaume-kuc-945925946"
+      alt: "SoundCloud"
+  - social:
+      title: "Github"
+      url: "https://github.com/guillaumekuc"
+      icon: "fa-brands fa-github"
+      alt: "Github"
+  #- social:
+      #title: "LinkedIn"
+      #icon: "fa-brands fa-linkedin"
+      #url: "https://www.linkedin.com/in/guillaumekuc/"
+      #alt: "LinkedIn"
+  - social:
+      title: "Bluesky"
+      url: "https://bsky.app/profile/guillaumekuc.bsky.social"
+      icon: "fa-brands fa-bluesky"
+      alt: "Bluesky"
+  - social:
+      title: "Email: guillaume@guillaumekuc.com"
+      icon: "fa-solid fa-envelope"
+      url: "mailto:guillaume@guillaumekuc.com"
+      alt: "guillaume@guillaumekuc.com"
+
+
+credits: '© 2025 <a href="https://guillaumekuc.github.io/links">Guillaume Kuc</a> &mdash; Powered by <a href="https://jekyllrb.com/">Jekyll</a> &mdash; Base theme: <a href="https://github.com/pages-themes/minimal">Minimal</a>'
 
 # Build settings
 #theme: minima
