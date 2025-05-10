@@ -62,6 +62,10 @@ socials:
       url: "mailto:guillaume@guillaumekuc.com"
       alt: "guillaume@guillaumekuc.com"
 
+authors:
+  guillaumekuc:
+    name: "Guillaume Kuc"
+    url: "https://guillaumekuc.github.io/links"
 
 credits: '© 2025 <a href="https://guillaumekuc.github.io/links">Guillaume Kuc</a> &mdash; Powered by <a href="https://jekyllrb.com/">Jekyll</a> &mdash; Base theme: <a href="https://github.com/pages-themes/minimal">Minimal</a>'
 

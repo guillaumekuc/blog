@@ -43,7 +43,10 @@ header h1 {
   margin:0 !important;
   margin-bottom: 15px;
   
+}
 
+h1 {
+  text-align: auto;
 }
 header p {
   text-align: center;
@@ -100,8 +103,40 @@ header p {
   transform: scale(1.1);
 }
 
+.reading-time {
+  display: block;
+  margin: auto;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+
 @media print, screen and (max-width: 960px) {
     header {
         padding-right: 0;
     }
+}
+
+.tags {
+  margin: 0.5em 0 1.5em;
+}
+
+.tag {
+  display: inline-block;
+  background: #f1f1f1;
+  padding: 0.2em 0.6em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 3px;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #555;
+  transition: background 0.2s ease;
+}
+
+.tag:hover {
+  background: #e1e1e1;
+  text-decoration: none;
 }
