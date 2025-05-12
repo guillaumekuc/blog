@@ -1,5 +1,5 @@
 ---
-title: "French Creative Industries & the Global Market: Fighting Against the Odds"
+title: French Creative Industries vs Global Competition
 author: guillaumekuc
 date: 2025-04-21
 categories: 
