@@ -23,8 +23,14 @@ a:hover{
 }
 
 body {
-  background-color: var(--background-color);
+
   color: var(--text-color);
+  background-image: url("../img/bg01.jpg");
+  background-attachment: fixed ;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-height: 100vh;
 } 
 
 header {
