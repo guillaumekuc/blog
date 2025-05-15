@@ -214,13 +214,12 @@ header p {
 /* 
  * Responsive breakpoint calculation:
  * 860px (main column width)
- * + 90px * 2 (left & right spacers)
- * + 48px * 4 (button width * 4 to maintain equal right spacing)
+ * + 90px * 4 (left & right spacers, before and after button width)
+ * + 48px * 4 (button width, symmetrical left right)
  * + 17px (scrollbar width)
- * = 1,247px total breakpoint
  */
 
-@media print, screen and (max-width: calc(860px + 90px * 2 + 48px * 4 + 17px)) {
+@media print, screen and (max-width: calc(860px + 90px * 4 + 48px * 2 + 17px)) {
     .back-to-top {
         display: none;
     }
