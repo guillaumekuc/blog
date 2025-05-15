@@ -10,11 +10,13 @@
   --lighter-primary-color: #89C0E7;
   --secondary-color: #e9c46a; /* Warm gold for accents */
   --text-color: #727272; /* Grey */
+
   --title-color: #222; /* Dark grey */
   --background-color: #fff; /* Light gray background */
   --border-color: #e5e5e5; /* Medium gray for borders */
   --hover-color: #1a7c71; /* Darker version of primary for hover states */
   --light-value: #eee;
+  --medium-value: #c0c0c0;
   --white-value: #fff;
 }
 
@@ -148,6 +150,7 @@ header p {
   text-decoration: none;
   color: var(--white-value);
   transition: background 0.2s ease;
+  cursor: pointer;
 }
 
 .tag:hover {
@@ -161,4 +164,64 @@ header p {
   margin-right: 0;
   text-align: right;
   font-size: 24;
+
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 70px;
+  right: calc((100% - 860px)/2 - 48px - 90px);
+  
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  
+  background-color: var(--medium-value);
+  color: white;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  font-size: 1.25rem;
+  
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  z-index: 999;
+  
+  /* Optional: initially hidden, to be shown via JS when scrolled down */
+  /* opacity: 0; */
+  /* visibility: hidden; */
+}
+
+.back-to-top:hover {
+  color:white;
+  background: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.back-to-top:active{
+  color:white;
+}
+
+.back-to-top:focus{
+  color:white;
+}
+
+
+/* 
+ * Responsive breakpoint calculation:
+ * 860px (main column width)
+ * + 90px * 2 (left & right spacers)
+ * + 48px * 4 (button width * 4 to maintain equal right spacing)
+ * + 17px (scrollbar width)
+ * = 1,247px total breakpoint
+ */
+
+@media print, screen and (max-width: calc(860px + 90px * 2 + 48px * 4 + 17px)) {
+    .back-to-top {
+        display: none;
+    }
 }
