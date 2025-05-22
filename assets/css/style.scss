@@ -228,23 +228,29 @@ header p {
   display: flex;
   flex-direction: row;
   margin-bottom: 15px;
+
 }
 
 .coloredDot {
+  transform-origin: center;
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 8px;
   transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px transparent;
 }
 
 .coloredDot:hover {
   transform: scale(1.1);
+  position:relative;
 }
 
 .coloredDot.active {
   border: solid var(--white-value) 2px;
   box-shadow: 0 0 0 1px var(--text-color);
+
 }
 
 .coloredDot.active:hover {
