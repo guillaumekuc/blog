@@ -31,11 +31,25 @@ colors:
       primary: "#20a0af" 
       darker: "#006885"
       lighter: null
+      default: true
   - color: 
-      name: "Warm Coral"
+      name: "Coral"
       primary: "#FF6B6B"
       darker: "#782020"
       lighter: "#db5353"
+  - color: 
+      name: "Amber"
+      primary: "#F4A460"
+      darker: "#782020"
+      lighter: "#db5353"
+  - color: 
+      name: "Lavender"
+      primary: "#B19CD9"
+      darker: "#782020"
+      lighter: "#db5353"
+      
+
+      
 
 socials:
   - social:

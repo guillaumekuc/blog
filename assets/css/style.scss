@@ -227,6 +227,7 @@ header p {
 .colorPicker {
   display: flex;
   flex-direction: row;
+  margin-bottom: 15px;
 }
 
 .coloredDot {
@@ -239,4 +240,13 @@ header p {
 
 .coloredDot:hover {
   transform: scale(1.1);
+}
+
+.coloredDot.active {
+  border: solid var(--white-value) 2px;
+  box-shadow: 0 0 0 1px var(--text-color);
+}
+
+.coloredDot.active:hover {
+  transform: unset;
 }
