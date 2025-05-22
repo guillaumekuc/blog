@@ -19,13 +19,19 @@
       <header>
 
         <div class="colorPicker">
+          
+          
+
           {% if site.colors %}
-            {% for item in site.colors %}
-              <a class="coloredDot {% if item.color.default %} active {% endif %}" style='background-color: {{ item.color.primary }}'>
-                
-              </a>
-            {% endfor%}
-          {% endif %}
+              {% for item in site.colors %}
+                <a class="coloredDot {% if item.color.default %} active {% endif %}" style='background-color: {{ item.color.primary }}'>
+                </a>
+              {% endfor%}
+            {% endif %}
+            <span class="colorPickerSeparator">·</span>
+            <i class="fa-solid fa-circle-half-stroke themeToggle"></i>
+
+          
         </div>
 
         {% if site.logo %}

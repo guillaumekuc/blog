@@ -18,6 +18,7 @@
   --light-value: #eee;
   --medium-value: #c0c0c0;
   --white-value: #fff;
+  --black-value: #000;
 }
 
 a {
@@ -224,22 +225,29 @@ header p {
         display: none;
     }
 }
+
 .colorPicker {
   display: flex;
   flex-direction: row;
   margin-bottom: 15px;
+  align-items: center;
+  font-size: 20px;
+}
 
+.colorPicker > * {
+  margin-right: 8px;
+  transition: all 0.2s ease-in-out;
 }
 
 .coloredDot {
+  display: inline-flex;
   transform-origin: center;
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  margin-right: 8px;
-  transition: all 0.2s ease-in-out;
   border: 2px solid transparent;
   box-shadow: 0 0 0 2px transparent;
+
 }
 
 .coloredDot:hover {
@@ -255,4 +263,33 @@ header p {
 
 .coloredDot.active:hover {
   transform: unset;
+}
+
+.colorPickerSeparator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  color: var(--medium-value);
+  width:4px;
+  height:16px;
+}
+
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width:20px;
+  height:20px;
+  margin-right:8px;
+  color: var(--medium-value);
+  vertical-align: middle;
+  line-height: 1;
+  
+}
+
+.themeToggle:hover {
+  color: var(--black-value);
+  transform: scale(1.1);
 }
