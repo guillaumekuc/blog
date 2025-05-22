@@ -17,11 +17,21 @@
   <body>
     <div class="wrapper">
       <header>
-        
+
+        <div class="colorPicker">
+          {% if site.colors %}
+            {% for item in site.colors %}
+              <a class="coloredDot" style='background-color: {{ item.color.primary }}'>
+                
+              </a>
+            {% endfor%}
+          {% endif %}
+        </div>
 
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
+        
 
         <div id="title">
         <h1><a href='{{ "/" | absolute_url }}'>{{ site.title | default: site.github.repository_name }}</a></h1>

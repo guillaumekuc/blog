@@ -5,7 +5,7 @@
 
 /*Your custom CSS rules here */
 :root {
-  --primary-color: #20a0af; /* #267CB9 */
+  --primary-color: #20a0af; /*#20a0af;  #267CB9 */
   --darker-primary-color: #006885;
   --lighter-primary-color: #89C0E7;
   --secondary-color: #e9c46a; /* Warm gold for accents */
@@ -223,4 +223,20 @@ header p {
     .back-to-top {
         display: none;
     }
+}
+.colorPicker {
+  display: flex;
+  flex-direction: row;
+}
+
+.coloredDot {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.coloredDot:hover {
+  transform: scale(1.1);
 }
