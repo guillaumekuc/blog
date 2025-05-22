@@ -24,7 +24,7 @@
 
           {% if site.colors %}
               {% for item in site.colors %}
-                <a class="coloredDot {% if item.color.default %} active {% endif %}" style='background-color: {{ item.color.primary }}'>
+                <a class="coloredDot {% if item.color.default %} active {% endif %}" style='background-color: {{ item.color.primary }}' title="{{ item.color.name }}">
                 </a>
               {% endfor%}
             {% endif %}
