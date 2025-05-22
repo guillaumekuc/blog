@@ -4,6 +4,16 @@ Live Resume: https://guillaumekuc.github.io/blog
 
 Personal writing on digital art, music theory, programming, design and creative work.
 
+### Features
+
+- Search bar
+- Back to Top
+- Reading time
+- Tags
+- Accent color switch
+- Copy Link
+
+
 ## Technology
 
 Built with Jekyll
