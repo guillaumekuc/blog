@@ -38,8 +38,17 @@
           
         </div>
 
+
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% assign portfolio = site.socials | where: 'social.title', 'Portfolio' | first %}
+          <a href="{% if portfolio %}{{ portfolio.social.url }}{% endif %}" title="Portfolio" target="_blank" class="profile-container" >
+            <img class="profile-img" src="{{site.profile | relative_url}}" alt="Profile" />
+
+            <div class="logo-overlay">
+              <div class="mask"></div>
+              {% svg "{{site.logo}}" class="logo-svg" %}
+            </div>
+          </a>
         {% endif %}
         
 

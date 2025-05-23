@@ -23,7 +23,8 @@ email: "guillaume@guillaumekuc.com"
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://guillaumekuc.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: /assets/img/profilePic.jpg
+profile: /assets/img/profilePic.jpg
+logo: /assets/img/logo.svg
 
 colors:
   - color:
@@ -97,6 +98,7 @@ remote_theme: pages-themes/minimal
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-inline-svg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
