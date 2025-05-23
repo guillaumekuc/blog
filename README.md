@@ -19,8 +19,15 @@ Markdown-based content
 - Reading time indicator
 - Tags
 - Color theme switch
+	- 5 Colors at 60 L value (Lab color mode)
+	- Precise Lab calculations to for darker variants
 - Dynamic fav icon
-- Copy Link
+	- Color indexed on current
+- Hover on profile picture reveals logo
+- Copy Link button in blog articles
+- Abstract flowy Background
+	- Discreete Light grey gradient
+	- Midjourney generated abstract motif
 
 ### Features Candidates
 
@@ -32,6 +39,8 @@ Markdown-based content
 - Archive page
 - Back To Top: smooth scrolling
 - Back To Top: better hover animation
+- Shortcuts system
+- Color picker (copy colors under cursor)
 
 ## Contact
 
