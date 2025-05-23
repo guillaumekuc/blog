@@ -24,10 +24,12 @@ Markdown-based content
 - Dynamic fav icon
 	- Color indexed on current
 - Hover on profile picture reveals logo
+	- Handmade svg emblem/logo
 - Copy Link button in blog articles
 - Abstract flowy Background
 	- Discreete Light grey gradient
 	- Midjourney generated abstract motif
+
 
 ### Features Candidates
 
