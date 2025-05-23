@@ -42,6 +42,10 @@ body {
   font-family: "Inter", sans-serif;
 } 
 
+body::selection {
+  background-color: var(--primary-color);
+  color: var(--white-value);
+}
 .wrapper {
   
 }

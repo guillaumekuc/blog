@@ -1,22 +1,40 @@
-console.log('color-picker.js is loaded');
+const defaultColor = hexToRgb(window.config.colors.find(item => 
+      item.color && item.color.default
+    ).color.primary);
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.coloredDot').forEach(dot => {
-        dot.addEventListener('click', function() {
-            // Remove active from all, add to clicked
-            document.querySelectorAll('.coloredDot').forEach(d => d.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Get colors
-            const color = window.getComputedStyle(this).backgroundColor;
-            const darker = getDarkerColorLab(color);
+const defaultDot =  Array.from(document.querySelectorAll(".coloredDot"))
+  .find(item => item.classList.contains("default"));
 
-            //update CSS variables
-            document.documentElement.style.setProperty('--primary-color', color);
-            document.documentElement.style.setProperty('--darker-primary-color', darker);
-        });
+
+if (defaultColor){
+    updateColorTheme(defaultColor, defaultDot);
+}
+
+
+document.querySelectorAll('.coloredDot').forEach(dot => {
+    dot.addEventListener('click', event => {
+        updateColorTheme(window.getComputedStyle(dot).backgroundColor, dot)
     });
 });
+
+
+function updateColorTheme(color, element) {
+    console.log("updateColorTheme");
+    // Remove active from all, add to clicked
+    document.querySelectorAll('.coloredDot').forEach(d => d.classList.remove('active'));
+    if (element){
+        element.classList.add('active');
+    }  
+    // Compute colors
+    const darker = getDarkerColorLab(color);
+
+    //update CSS variables
+    document.documentElement.style.setProperty('--primary-color', color);
+    document.documentElement.style.setProperty('--darker-primary-color', darker);
+
+    //update favicon
+    createDotFavicon(color);
+}
 
 
 function getDarkerColorLab(rgbColor, offset = -20) {
@@ -93,4 +111,34 @@ function labToRgb(L, a, b) {
     });
     
     return [r, g, b_rgb];
+}
+
+function hexToRgb(hex) {
+  // Remove the hash if present
+  hex = hex.replace('#', '');
+  
+  // Parse the hex values
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+  
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function createDotFavicon(color) {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="14" fill="${color}"/>
+    </svg>
+  `;
+  
+  const encoded = btoa(svg);
+  const dataUrl = `data:image/svg+xml;base64,${encoded}`;
+  
+  // Update favicon
+  let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/svg+xml';
+  link.rel = 'shortcut icon';
+  link.href = dataUrl;
+  document.getElementsByTagName('head')[0].appendChild(link);
 }
