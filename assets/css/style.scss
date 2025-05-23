@@ -70,6 +70,10 @@ h2, h3, h4, h5 {
   text-align: auto;
   color: var(--primary-color); 
 }
+
+h2::before{
+  content: "› ";
+}
 header p {
   text-align: center;
 
