@@ -27,8 +27,9 @@ function getDarkerColorLab(rgbColor, offset = -20) {
     const lab = rgbToLab(rgb[0], rgb[1], rgb[2]);
     lab[0] = Math.max(0, Math.min(100, lab[0] + offset)); // Reduce L* value
     //hue shift: slightly less red & more blue (mimicks in-shadow hue shifts)
-    lab[1] = Math.max(-128, Math.min(127, lab[1]-6.375));
-    lab[2] = Math.max(-128, Math.min(127, lab[2]-12.75));
+    const range=255;
+    lab[1] = Math.max(-128, Math.min(127, lab[1]-3/100*range));
+    lab[2] = Math.max(-128, Math.min(127, lab[2]-8/100*range));
     
     const darkerRgb = labToRgb(lab[0], lab[1], lab[2]);
     return `rgb(${Math.round(darkerRgb[0])}, ${Math.round(darkerRgb[1])}, ${Math.round(darkerRgb[2])})`;
