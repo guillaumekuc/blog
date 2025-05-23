@@ -25,6 +25,8 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://guillaumekuc.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 profile: /assets/img/profilePic.jpg
 logo: /assets/img/logo.svg
+repository: guillaumekuc/blog.git
+
 
 colors:
   - color:
