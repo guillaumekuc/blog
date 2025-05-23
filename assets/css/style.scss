@@ -23,18 +23,16 @@
 }
 
 header h1 {
-  box-sizing: border-content;
   display: flex;
   text-align: center;
   margin:0 !important;
   text-transform: unset;
   border: solid 4px transparent;
-  box-shadow: 0 0 0 0px var(--primary-color);
-
-
+  box-shadow: 0 0 0 -1px var(--primary-color);
   border-radius: 10px;
-  transition:border-shadow 0.075s linear;
-  transition: 0.05s background 0s ease-in-out;
+  transition: box-shadow 0.04s steps(1);
+  transition: background 0.04s steps(1) 0.04s ;
+
 }
 
 
@@ -43,7 +41,7 @@ header h1 {
 
 header h1 a {
   color: var(--darker-primary-color); 
-  transition: all 0.075s;
+  transition: all 0.08s steps(2);
 
   
   background-clip: padding-box;
@@ -52,9 +50,7 @@ header h1 a {
 
 header h1:hover {
 
-  /* background-color: var(--darker-primary-color); */
-  transition: transform 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.16s steps(3);
   border: solid 4px transparent;
   box-shadow: 0 0 0 4px var(--primary-color);
   background-color: var(--primary-color);
@@ -68,7 +64,7 @@ header h1:hover a {
      color: var(--white-value); 
       filter: saturate(50%);
     transform: scale(0.95);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.16s steps(3);
 }
 
 
@@ -117,8 +113,8 @@ header {
   display: inline-block;
   margin: auto;
   margin-bottom: 15px;
-  transition: all 0.2s ease-in-out;
 }
+
 
 .profile-img {
   display: block;
@@ -126,9 +122,9 @@ header {
   height: 120px;
   border-radius: 50%;
 
-  transition:0.075s;
+  transition: all 0.08s steps(2);
   border: solid 4px transparent;
-  box-shadow: 0 0 0 1px transparent;
+  box-shadow: 0 0 0 0px var(--primary-color);
 }
 
 .logo-overlay {  
@@ -142,7 +138,7 @@ header {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition:0.075s;
+  transition:all 0.08s steps(2);
   cursor: pointer;
    
 }
@@ -155,7 +151,7 @@ header {
   height: 105px;
   margin-top: -7.5px; /* visual weight centering*/
   fill: var(--white-value);
-  transition: none;
+  transition: all 0.08s steps(2);
   transform: scale(1.05);
 
 }
@@ -171,18 +167,18 @@ header {
 
 .profile-container:hover .logo-overlay {
   opacity: 1;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.16s steps(1 start) ;
   
 }
 .profile-container:hover .logo-svg {
   transform: scale(1.0);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.16s steps(3) ;
 }
 
 .profile-container:hover .profile-img {
   border-color: var(--white-value);
   box-shadow: 0 0 0 5px var(--primary-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.16s steps(3);
 }
 
 
@@ -250,13 +246,13 @@ header p {
 .social-link i {
   margin-right: 8px;
   font-size: 24px;
-  transition: none;
+  transition: all 0.08s steps(2);
 
 }
 
 .social-link i:hover {
   transform: scale(1.1);
-  transition: transform 0.2s;
+  transition: transform 0.16s steps(3);
 }
 
 .reading-time {
@@ -289,14 +285,15 @@ header p {
   font-size: 0.8em;
   text-decoration: none;
   color: var(--white-value);
-  transition:0.075s;
+  transition: all 0.08s steps(2);
   cursor: pointer;
 }
 
 .tag:hover {
   background: var(--darker-primary-color);
   text-decoration: none;
-  transition: background 0.2s ease;
+  font-weight: bold;
+  transition: all 0.08s steps(2);
 }
 
 .copylink {
@@ -378,11 +375,15 @@ header p {
 
 .colorPicker > * {
   margin-right: 8px;
-  transition: all 0.075s;
+  transition: all 0.08s steps(2);
 }
 
 .colorPicker > *:hover {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.16s steps(3);
+} 
+
+.colorPicker > *.active {
+  transition: all 0.08s steps(2);
 } 
 
 .coloredDot {
