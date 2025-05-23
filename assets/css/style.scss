@@ -7,6 +7,7 @@
 :root {
   --primary-color: #20a0af; /*#20a0af;  #267CB9 */
   --darker-primary-color: #006885;
+  --darkest-rimary-color: #000;
   --lighter-primary-color: #89C0E7;
   --secondary-color: #e9c46a; /* Warm gold for accents */
   --text-color: #727272; /* Grey */
@@ -21,6 +22,56 @@
   --black-value: #000;
 }
 
+header h1 {
+  box-sizing: border-content;
+  display: flex;
+  text-align: center;
+  margin:0 !important;
+  text-transform: unset;
+  border: solid 4px transparent;
+  box-shadow: 0 0 0 0px var(--primary-color);
+
+
+  border-radius: 10px;
+  transition:border-shadow 0.075s linear;
+  transition: 0.05s background 0s ease-in-out;
+}
+
+
+
+
+
+header h1 a {
+  color: var(--darker-primary-color); 
+  transition: all 0.075s;
+
+  
+  background-clip: padding-box;
+
+}
+
+header h1:hover {
+
+  /* background-color: var(--darker-primary-color); */
+  transition: transform 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  border: solid 4px transparent;
+  box-shadow: 0 0 0 4px var(--primary-color);
+  background-color: var(--primary-color);
+  
+
+
+}
+
+header h1:hover a {
+
+     color: var(--white-value); 
+      filter: saturate(50%);
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+}
+
+
 a {
   color: var(--primary-color);
 }
@@ -28,6 +79,12 @@ a {
 a:hover{
   font-weight: unset;
   color: var(--darker-primary-color);
+}
+
+a:focus{
+  outline:none;
+  background:none;
+  box-shadow: none;
 }
 
 body {
@@ -75,7 +132,7 @@ header {
   height: 120px;
   border-radius: 50%;
 
-  transition: all 0.2s ease-in-out;
+  transition:0.075s;
   border: solid 4px transparent;
   box-shadow: 0 0 0 1px transparent;
 }
@@ -90,9 +147,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition:0.075s;
   cursor: pointer;
    
 }
@@ -105,7 +161,7 @@ header {
   height: 105px;
   margin-top: -7.5px; /* visual weight centering*/
   fill: var(--white-value);
-  transition: all 0.2s ease-in-out;
+  transition: none;
   transform: scale(1.05);
 
 }
@@ -121,27 +177,21 @@ header {
 
 .profile-container:hover .logo-overlay {
   opacity: 1;
+  transition: all 0.2s ease-in-out;
   
 }
 .profile-container:hover .logo-svg {
   transform: scale(1.0);
+  transition: transform 0.2s ease-in-out;
 }
 
 .profile-container:hover .profile-img {
   border-color: var(--white-value);
   box-shadow: 0 0 0 5px var(--primary-color);
+  transition: all 0.2s ease-in-out;
 }
 
-header h1 {
-  display:block;
-  text-align: center;
-  margin:0 !important;
-  margin-bottom: 15px;
-  text-transform: unset;
 
-
-  
-}
 
 h1 {
 
@@ -153,6 +203,11 @@ h2, h3, h4, h5 {
   color: var(--primary-color); 
 
   font-family: "Inter", sans-serif;
+}
+
+h2 {
+  color: unset;
+  color: var(--darker-primary-color);
 }
 
 h2::before{
@@ -201,12 +256,13 @@ header p {
 .social-link i {
   margin-right: 8px;
   font-size: 24px;
-  transition: transform 0.2s;
+  transition: none;
 
 }
 
 .social-link i:hover {
   transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 .reading-time {
@@ -239,13 +295,14 @@ header p {
   font-size: 0.8em;
   text-decoration: none;
   color: var(--white-value);
-  transition: background 0.2s ease;
+  transition:0.075s;
   cursor: pointer;
 }
 
 .tag:hover {
   background: var(--darker-primary-color);
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .copylink {
@@ -277,7 +334,8 @@ header p {
   font-size: 1.25rem;
   
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+ 
+  transition:0.075s;
   
   z-index: 999;
   
@@ -290,6 +348,7 @@ header p {
   color:white;
   background: var(--primary-color);
   transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
 }
 
 .back-to-top:active{
@@ -325,8 +384,12 @@ header p {
 
 .colorPicker > * {
   margin-right: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.075s;
 }
+
+.colorPicker > *:hover {
+  transition: all 0.2s ease-in-out;
+} 
 
 .coloredDot {
   display: inline-flex;
@@ -340,18 +403,19 @@ header p {
 }
 
 .coloredDot:hover {
+  cursor: pointer;
   transform: scale(1.1);
   position:relative;
 }
 
 .coloredDot.active {
   border: solid var(--white-value) 2px;
-  box-shadow: 0 0 0 1px var(--text-color);
+  box-shadow: 0 0 0 1px var(--darker-primary-color);
 
 }
 
 .coloredDot.active:hover {
-  transform: unset;
+  /* transform: unset; */
 }
 
 .colorPickerSeparator {
