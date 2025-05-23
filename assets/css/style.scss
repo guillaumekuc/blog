@@ -70,11 +70,14 @@ header h1:hover a {
 
 a {
   color: var(--primary-color);
+  transition: color 0.48s steps(4);
 }
 
 a:hover{
   font-weight: unset;
   color: var(--darker-primary-color);
+  transition: unset;
+
 }
 
 body {
@@ -191,6 +194,7 @@ h1 {
 h2, h3, h4, h5 {
   text-align: auto;
   color: var(--primary-color); 
+  transition: color 0.48s steps(4);
 
   font-family: "Inter", sans-serif;
 }
@@ -198,6 +202,7 @@ h2, h3, h4, h5 {
 h2 {
   color: unset;
   color: var(--darker-primary-color);
+  transition: color 0.48s steps(4);
 }
 
 h2::before{
@@ -287,6 +292,7 @@ header p {
   color: var(--white-value);
   transition: all 0.08s steps(2);
   cursor: pointer;
+  transition: background-color 0.48s steps(4);
 }
 
 .tag:hover {
@@ -315,6 +321,7 @@ header p {
   border-radius: 8px;
   
   background-color: var(--medium-value);
+  
   color: white;
   
   display: flex;
@@ -326,7 +333,7 @@ header p {
   
   cursor: pointer;
  
-  transition:0.075s;
+  transition: all 0.16s steps(3);
   
   z-index: 999;
   
@@ -339,7 +346,7 @@ header p {
   color:white;
   background: var(--primary-color);
   transform: scale(1.1);
-  transition: all 0.1s ease-in-out;
+  transition: all 0.16s steps(3);
 }
 
 .back-to-top:active{
