@@ -29,6 +29,7 @@ Markdown-based content
 - Abstract flowy Background
 	- Discreete Light grey gradient
 	- Midjourney generated abstract motif
+- steps animations, approximating 12fps animation style
 
 
 ### Features Candidates
@@ -37,12 +38,13 @@ Markdown-based content
 - Color theme persistence
 - Lightness value slider
 - Tag system
-- Pinned system
+- Pinned articles system
 - Archive page
 - Back To Top: smooth scrolling
 - Back To Top: better hover animation
 - Shortcuts system
 - Color picker (copy colors under cursor)
+- Better search bar design
 
 ## Contact
 
