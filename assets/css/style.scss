@@ -32,7 +32,7 @@ header h1 {
   border-radius: 10px;
   transition: box-shadow 0.04s steps(1);
   transition: background 0.04s steps(1) 0.04s ;
-
+position: relative;
 }
 
 
@@ -48,23 +48,50 @@ header h1 a {
 
 }
 
+header h1::after{
+  display: flex;
+  z-index: 9999;
+  content: "";
+  position: absolute;
+  top:50%;
+  left:50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+      mask: url("../img/denim.png");
+  mask-size: 360px;
+  mask-type: alpha;
+  background-color: white;
+  border: 0px;
+  border-radius:10px;
+  opacity: 0;
+  transform-origin: center;
+
+}
+
 header h1:hover {
 
   transition: box-shadow 0.16s steps(3);
   border: solid 4px transparent;
-  box-shadow: 0 0 0 4px var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color);
   background-color: var(--primary-color);
-  
+
 
 
 }
 
+header h1:hover::after {
+  opacity:1;
+
+}
 header h1:hover a {
 
      color: var(--white-value); 
       filter: saturate(50%);
     transform: scale(0.95);
     transition: transform 0.16s steps(3);
+
+
 }
 
 
@@ -161,11 +188,15 @@ header {
 
 .mask {
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
     display: block;
   width: 120px;
   height: 120px; 
   border-radius: 50%;
+  /* mask */
+  mask: url("../img/denim.png");
+  mask-size:360px;
+  mask-type: alpha;
 }
 
 .profile-container:hover .logo-overlay {
@@ -176,12 +207,14 @@ header {
 .profile-container:hover .logo-svg {
   transform: scale(1.0);
   transition: transform 0.16s steps(3) ;
+
 }
 
 .profile-container:hover .profile-img {
   border-color: var(--white-value);
   box-shadow: 0 0 0 5px var(--primary-color);
   transition: all 0.16s steps(3);
+
 }
 
 
@@ -247,6 +280,7 @@ header p {
   margin-bottom: 15px;
   text-align: center;
 
+
 }
 .social-link i {
   margin-right: 8px;
@@ -258,6 +292,7 @@ header p {
 .social-link i:hover {
   transform: scale(1.1);
   transition: transform 0.16s steps(3);
+
 }
 
 .reading-time {
@@ -293,12 +328,13 @@ header p {
   transition: all 0.08s steps(2);
   cursor: pointer;
   transition: background-color 0.48s steps(4);
+
 }
 
 .tag:hover {
   background: var(--darker-primary-color);
   text-decoration: none;
-  
+
   transition: all 0.08s steps(2);
 }
 
@@ -374,9 +410,11 @@ header p {
 
 .colorPicker {
   display: flex;
+  box-sizing: content-box;
   flex-direction: row;
   margin-bottom: 15px;
   align-items: center;
+  justify-content: flex-start;
   font-size: 20px;
 }
 
@@ -394,20 +432,45 @@ header p {
 } 
 
 .coloredDot {
-  display: inline-flex;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
   transform-origin: center;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 2px solid transparent;
   box-shadow: 0 0 0 2px transparent;
-
 }
+
+.coloredDot::after{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  content:"";
+  box-sizing: content-box;
+   border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  opacity:1;
+    /* mask */
+  mask: url("../img/denim.png");
+  mask-size: 240px;
+  mask-type: alpha;
+}
+
+
 
 .coloredDot:hover {
   cursor: pointer;
   transform: scale(1.1);
-  position:relative;
+
+
 }
 
 .coloredDot.active {
@@ -416,9 +479,14 @@ header p {
 
 }
 
-.coloredDot.active:hover {
-  /* transform: unset; */
+.coloredDot.active::after{
+  opacity: 0;
 }
+
+.coloredDot:hover::after{
+  opacity: 0;
+}
+
 
 .colorPickerSeparator {
   display: inline-flex;
