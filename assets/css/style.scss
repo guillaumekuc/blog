@@ -51,6 +51,7 @@ header h1 a {
 header h1::after{
   display: flex;
   z-index: 9999;
+  pointer-events: none;
   content: "";
   position: absolute;
   top:50%;
@@ -58,15 +59,21 @@ header h1::after{
   height: 100%;
   width: 100%;
   transform: translate(-50%, -50%);
-      mask: url("../img/denim.png");
-  mask-size: 360px;
+      mask: url("../img/dots1.svg");
+  mask-size: 110px;
   mask-type: alpha;
-  background-color: white;
+  background-color: rgba(255,255,255,0.75);
   border: 0px;
   border-radius:10px;
   opacity: 0;
   transform-origin: center;
 
+
+}
+
+header h1::after svg {
+  filter: url('./img/blur.svg#blur-effect');
+  fill: red;
 }
 
 header h1:hover {
@@ -194,8 +201,8 @@ header {
   height: 120px; 
   border-radius: 50%;
   /* mask */
-  mask: url("../img/denim.png");
-  mask-size:360px;
+  mask: url("../img/dots1.svg");
+  mask-size:115px;
   mask-type: alpha;
 }
 
@@ -456,12 +463,10 @@ header p {
    border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: black;
-  opacity:1;
+  background-color: white;
+  opacity:0;
     /* mask */
-  mask: url("../img/denim.png");
-  mask-size: 240px;
-  mask-type: alpha;
+
 }
 
 
@@ -481,6 +486,9 @@ header p {
 
 .coloredDot.active::after{
   opacity: 0;
+  mask: url("../img/denim.png");
+  mask-size: 240px;
+  mask-type: alpha;
 }
 
 .coloredDot:hover::after{
