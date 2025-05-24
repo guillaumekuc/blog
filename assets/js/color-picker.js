@@ -27,10 +27,12 @@ function updateColorTheme(color, element) {
     }  
     // Compute colors
     const darker = getDarkerColorLab(color);
+    const darkest = getDarkerColorLab(darker);
 
     //update CSS variables
     document.documentElement.style.setProperty('--primary-color', color);
     document.documentElement.style.setProperty('--darker-primary-color', darker);
+    document.documentElement.style.setProperty('--darkest-primary-color', darkest);
 
     //update favicon
     createDotFavicon(color);
