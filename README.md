@@ -15,21 +15,23 @@ Markdown-based content
 ### Features
 
 - Search bar
-- Back to Top
+- Back to Top Button
+	- Scroll triggers visibility
+	- Bounce hover animation: squash and stretch
 - Reading time indicator
 - Tags
 - Color theme switch
-	- 5 Colors at 60 L value (Lab color mode)
-	- Precise Lab calculations to for darker variants
+	- 5 Hues
+	- Precise Lab calculations to derive darker variants (-20 L, more blue, less red, mimicking natural shadows)
 - Dynamic fav icon
-	- Color indexed on current
+	- Color indexed on current accent color
 - Hover on profile picture reveals logo
 	- Handmade svg emblem/logo
 - Copy Link button in blog articles
 - Abstract flowy Background
 	- Discreete Light grey gradient
 	- Midjourney generated abstract motif
-- steps animations, approximating 12fps animation style
+- steps animations, approximating 12fps animation style (ref trad anim/retro games)
 
 
 ### Features Candidates
