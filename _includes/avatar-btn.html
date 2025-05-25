@@ -1,5 +1,12 @@
 <!-- 
- Example configuration (set these CSS variables externally):
+Example include
+  	include avatar-btn.html 
+    	link = [url]
+    	profilePic = [url]
+    	logo = [svg]
+    	title = [string]
+
+Example configuration (set these CSS variables externally):
   .avatar {
     --btn-size: 120px;
 	--btn-main-color: red;
@@ -11,7 +18,7 @@
 -->
 
 
-<a href="{{include.link | '#'}}" title="{{include.title | 'Avatar'}}" target="_blank" class="avatar" >
+<a href="{{include.link | '#'}}" title="{{include.title | 'Avatar Link'}}" aria-label="{{include.title | 'Avatar Link'}}" target="_blank" class="avatar" >
             <img 
             	class="avatar-profile-pic" 
             	src="{{include.profilePic | relative_url}}" 
@@ -28,6 +35,7 @@
 		position: relative;
 		width: fit-content;
 		height: fit-content;
+		--half-tone: url("https://guillaumekuc.github.io/blog/assets/img/dots1.svg");
 	}
 
 	.avatar-profile-pic {
@@ -65,7 +73,7 @@
 		width: var(--btn-size, 120px);
 		height: var(--btn-size, 120px);
 		border-radius: 50%;
-		mask: url("https://guillaumekuc.github.io/blog/assets/img/dots1.svg");
+		mask: var(--half-tone);
 		mask-size: 115px;
 		mask-type: alpha;		
 	}
