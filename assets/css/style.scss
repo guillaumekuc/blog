@@ -15,8 +15,6 @@
   --medium-value: #c0c0c0;
   --white-value: #fff;
   --black-value: #000;
- 
-
 }
 
 
@@ -144,90 +142,16 @@ header {
 
 }
 
-.profile-img, .mask, .logo-overlay{
-  box-sizing: content-box;
-}
-
-.profile-container {
-  position: relative;
-  display: inline-block;
-  margin: auto;
+.avatar {
+  --btn-size: 120px;
+  --btn-main-color: var(--primary-color);
+  --logo-size: 105px;
+  --logo-fill: white;
+  --logo-offset-y: -7.5px;
+  margin-right: auto;
+  margin-left: auto; 
   margin-bottom: 15px;
 }
-
-
-.profile-img {
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-
-  transition: all 0.08s steps(2);
-  border: solid 4px transparent;
-  box-shadow: 0 0 0 0px var(--primary-color);
-}
-
-.logo-overlay {  
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition:all 0.08s steps(2);
-  cursor: pointer;
-   
-}
-
-.logo-svg {
-  z-index: 1000;
-  position: absolute;
-
-  width: 105px;
-  height: 105px;
-  margin-top: -7.5px; /* visual weight centering*/
-  fill: var(--white-value);
-  transition: all 0.08s steps(2);
-  transform: scale(1.05);
-
-}
-
-.mask {
-
-  background-color: rgba(0, 0, 0, 1);
-    display: block;
-  width: 120px;
-  height: 120px; 
-  border-radius: 50%;
-  /* mask */
-  mask: url("../img/dots1.svg");
-  mask-size:115px;
-  mask-type: alpha;
-}
-
-.profile-container:hover .logo-overlay {
-  opacity: 1;
-  transition: all 0.16s steps(1 start) ;
-  
-}
-.profile-container:hover .logo-svg {
-  transform: scale(1.0);
-  transition: transform 0.16s steps(3) ;
-
-}
-
-.profile-container:hover .profile-img {
-  border-color: var(--white-value);
-  box-shadow: 0 0 0 5px var(--primary-color);
-  transition: all 0.16s steps(3);
-
-}
-
-
 
 h1 {
 
