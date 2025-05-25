@@ -1,43 +1,42 @@
 <!-- 
-  Dependencies: 
-  - Font Awesome
-  - Style inheritances
+  Requirements: 
+  - Font Awesome CSS: fa-solid fa-chevron-up
+
+ Example configuration (set these CSS variables externally):
+  #back-to-top-btn {
+    --btn-size: 48px;
+    --btn-bottom: 40px;
+    --btn-right: 40px;
+    --btn-bg: grey;
+    --btn-bg-hover: red;
+    --btn-color: white;
+  }
 -->
 
 
-<div id="back-to-top-button" aria-label="Go back to top">
+<div id="back-to-top-btn" aria-label="Go back to top">
   <i class="fa-solid fa-chevron-up"></i>
 </div>
 
 <style>
-  #back-to-top-button {
-    /* inherit colors */
-    --bgColor: var(--medium-value);
-    --hover-bgColor: var(--primary-color);
-    --color: var(--white-value);
-    --breakpoint: 1333px;
-    /* 
-    * Calculation: 860px + (90px * 4) + (48px * 2) + 17px = 1333px
-    * Components: main-column + spacers + button-widths + scrollbar
-    */
+  #back-to-top-btn {
 
     position: fixed;
     display: flex;
 
-    bottom: 70px;
-    right: calc((100% - (860px + 48px * 2))/2 - 48px); /* (total width - (central column + 2 * buttonWidth))/2 - Spacer. Spacer is equal to buttonWidth */
-
-    width: 48px;
-    height: 48px;
+    width: var(--btn-size, 48px);
+    height: var(--btn-size, 48px);
     border-radius: 8px;
+    bottom: var(--btn-bottom, 40px);
+    right: var(--btn-right, 40px);
     
     opacity: 0;
     pointer-events: none;
 
     cursor: pointer;
 
-    background-color: var(--bgColor);
-    color: var(--color);
+    background-color: var(--btn-bg, grey);
+    color: var(--btn-color, white);
     
     justify-content: center;
     align-items: center;
@@ -51,15 +50,15 @@
     z-index: 999;
   }
 
-  #back-to-top-button.visible {
+  #back-to-top-btn.visible {
     pointer-events: all;
     opacity: 1;
     transform: translateY(0);
     transition: all 0.16s steps(3);
   }
 
-  #back-to-top-button.visible:hover {
-    background: var(--hover-bgColor);
+  #back-to-top-btn.visible:hover {
+    background: var(--btn-bg-hover, red);
     animation: bounceSteps 1s infinite steps(1, start);
   }
 
@@ -80,30 +79,12 @@
     100% { transform: translateY(0px) scaleY(1) scaleX(1); }
   }
 
-  /* Responsive adjustments */
-  @media print, screen and (max-width: 1148px) {
-    /* 860+(48+48*2)*2 columnWidth + (buttonWidth + spacer * 2) *2 */
-    #back-to-top-button {
-      /* available spacing insufficient for proper display */
-      display: none;
-    }
-  }
 
-  @media print, screen and (max-width: 960px) {
-    #back-to-top-button {
-      display: flex;
-      width:40px;
-      height:40px;
-      right: calc(50% - 20px);
-      bottom:20px;
-      transform: translateY(50%); 
-    }
-  }
 </style>
 
 <script>
   (function() {
-    const backToTopBtn = document.getElementById('back-to-top-button');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
     
     function toggleButtonVisibility() {
       if (window.scrollY > 300) {

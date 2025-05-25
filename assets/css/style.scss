@@ -466,3 +466,30 @@ header p {
   color: var(--black-value);
   transform: scale(1.1);
 }
+
+#back-to-top-btn {
+  --btn-bg: var(--medium-value);
+  --btn-bg-hover: var(--primary-color);
+  --btn-color: white;
+  --btn-size: 48px;
+  --btn-right: calc((100% - (860px + 48px * 2))/2 - 48px);
+  --btn-bottom: 70px;
+}
+
+@media print, screen and (max-width: 1148px) {
+  /* 860+(48+48*2)*2 columnWidth + (buttonWidth + spacer * 2) *2 */
+  #back-to-top-btn {
+    /* available spacing insufficient for proper display */
+    display: none;
+  }
+}
+
+@media print, screen and (max-width: 960px) {
+  #back-to-top-btn {
+    --btn-right: calc(50% - 20px);
+    --btn-bottom:20px;
+    --btn-size: 40px;
+    display: flex;
+    transform: translateY(50%); 
+  }
+}
