@@ -2,56 +2,64 @@ Live: https://guillaumekuc.github.io/blog
 
 ## About
 
-Personal writing on digital art, music theory, programming, design and creative work.
+Personal blog.
 
 ## Technology
 
 Built with Jekyll
-
+Base theme: Minimal
 Hosted on GitHub Pages
-
 Markdown-based content
+
+## Workflow
+
+- Local dev: 'bundle exec jekyll serve'
+- '_config.yml' propagates w/ Jekyll/Liquid templating system.
+- 2 branches: developement & main
 
 ### Features
 
-- Search bar
+- Interactive Avatar: profile/logo + link
+	- Handmade svg emblem/logo
+	- Hover state
 - Back to Top Button
-	- Scroll triggers visibility
-	- Bounce hover animation: squash and stretch
+	- Scroll triggered visibility
+	- Bounce animation on hover: squash and stretch
+	- Smooth scroll back to top
+- Search bar
 - Reading time indicator
 - Tags
 - Color theme switch
-	- 5 Hues
-	- Precise Lab calculations to derive darker variants (-20 L, more blue, less red, mimicking natural shadows)
-- Dynamic fav icon
-	- Color indexed on current accent color
-- Hover on profile picture reveals logo
-	- Handmade svg emblem/logo
+	- 5 Hues of equal lightness value (Lab color mode): Teal, Coral, Olive, Lavander, Bronze
+	- Natural looking color variants (hue and value shifts mimicking shadows using precise Lab color mode calculations)
+	- Dynamic fav icon replacement using current active color
 - Copy Link button in blog articles
 - Abstract flowy Background
 	- Discreete Light grey gradient
 	- Midjourney generated abstract motif
-- steps animations, approximating 12fps animation style (ref trad anim/retro games)
-
+- Overall style
+	- Steps animations, approximating 12fps animation style (ref trad anim/retro games)
+	- Print design/Content first (Dofus mag reference)
+	- Half-tones
 
 ### Features Candidates
 
+- Better search bar design
 - Dark theme
 - Color theme persistence
 - Lightness value slider
-- Tag system
-- Pinned articles system
-- Archive page
-- Back To Top: smooth scrolling
-- Back To Top: better hover animation
+- Tag pages
+- Pinned articles
+- Proper archive page
 - Shortcuts system
 - Color picker (copy colors under cursor)
-- Better search bar design
+
+## Bug queue
+
+- Layout breaks when typing in the search input field on mobile screen sizes.
+- Responsive layout  breaks for the back to top button on intermediate screen sizes (button partly off screen).
 
 ## Contact
 
 guillaume@guillaumekuc.com
 
-
-## License
-Content © 2025 Guillaume Kuc. Code MIT licensed.
