@@ -70,21 +70,12 @@ header h1::after{
 
 
 }
-
-header h1::after svg {
-  filter: url('./img/blur.svg#blur-effect');
-  fill: red;
-}
-
 header h1:hover {
 
   transition: box-shadow 0.16s steps(3);
   border: solid 4px transparent;
   box-shadow: 0 0 0 2px var(--primary-color);
   background-color: var(--primary-color);
-
-
-
 }
 
 header h1:hover::after {
