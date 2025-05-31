@@ -46,6 +46,8 @@ Example configuration (set these CSS variables externally):
 		width: fit-content;
 		height: fit-content;
 		--half-tone: url("https://guillaumekuc.github.io/blog/assets/img/dots1.svg");
+		--half-tone-size: 115px; /* Pattern dependant */
+	  --12fps-frame-duration: 0.08s; /*apprx. duration of a frame in s, 12 fps */
 	}
 
 	.avatar-profile-pic {
@@ -54,7 +56,7 @@ Example configuration (set these CSS variables externally):
 		width: var(--btn-size, 120px);
 		height: var(--btn-size, 120px);
 		border-radius: 50%;
-		transition: all 0.08s steps(2);
+		transition: all var(--12fps-frame-duration) steps(2);
 		border: solid 4px transparent;
 		box-shadow: 0 0 0 0px var(--btn-main-color, red);		
 	}
@@ -73,7 +75,7 @@ Example configuration (set these CSS variables externally):
 		display: flex;
     align-items: center;
 		justify-content: center;
-		transition:all 0.08s steps(2);
+		transition:all var(--12fps-frame-duration) steps(2);
 
 	}
 
@@ -82,12 +84,12 @@ Example configuration (set these CSS variables externally):
 		display: block;
 		position:absolute;
 		box-sizing: content-box;
-  		background-color: rgba(0, 0, 0, 1);
+  	background-color: rgba(0, 0, 0, 1);
 		width: var(--btn-size, 120px);
 		height: var(--btn-size, 120px);
 		border-radius: 50%;
 		mask: var(--half-tone);
-		mask-size: 115px;
+		mask-size: var(--half-tone-size); 
 		mask-type: alpha;		
 	}
 
@@ -100,26 +102,26 @@ Example configuration (set these CSS variables externally):
 		width: var(--logo-size, 105px);
 		height: var(--logo-size, 105px);
 		fill: var(--logo-fill, white);
-		transition:all 0.08s steps(2);
+		transition:all var(--12fps-frame-duration) steps(2);
 		transform: scale(1.05);
 	}
 
 	/* Hover interactions */
 	.avatar:hover .avatar-overlay {
 	  opacity: 1;
-	  transition: all 0.16s steps(1 start) ;
+	  transition: all calc(2 * var(--12fps-frame-duration)) steps(1 end) ;
 	  
 	}
 	.avatar:hover .avatar-logo {
 	  transform: scale(1.0);
-	  transition: transform 0.16s steps(3) ;
+	  transition: transform calc(2 * var(--12fps-frame-duration)) steps(3) ;
 
 	}
 
 	.avatar:hover .avatar-profile-pic {
 	  border-color: transparent;
 	  box-shadow: 0 0 0 5px var(--btn-main-color, red);
-	  transition: all 0.16s steps(3);
+	  transition: all calc(2 * var(--12fps-frame-duration)) steps(3);
 	}
 
 </style>

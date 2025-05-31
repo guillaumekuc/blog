@@ -20,6 +20,7 @@
 
 <style>
   #back-to-top-btn {
+    --12fps-frame-duration: 0.08s; /*apprx. duration of a frame in s, 12 fps */
 
     position: fixed;
     display: flex;
@@ -54,12 +55,12 @@
     pointer-events: all;
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.16s steps(3);
+    transition: all calc(2 * var(--12fps-frame-duration)) steps(3);
   }
 
   #back-to-top-btn.visible:hover {
     background: var(--btn-bg-hover, red);
-    animation: bounceSteps 1s infinite steps(1, start);
+    animation: bounceSteps calc(12 * var(--12fps-frame-duration)) infinite steps(1, start);
   }
 
   /* idle bounce animation: squash & stretch, volume conservation */

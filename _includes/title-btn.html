@@ -23,20 +23,22 @@ Example configuration (set these CSS variables externally):
 
 .title {
   --half-tone: url("https://guillaumekuc.github.io/blog/assets/img/dots1.svg");
+  --12fps-frame-duration: 0.08s; /*apprx. duration of a frame in s, 12 fps */
+
   display: flex;
   width: fit-content;
   position: relative;
   border: solid 4px transparent;
   box-shadow: 0 0 0 -1px var(--btn-hover-bg-color, red);
   border-radius: 10px;
-  transition: box-shadow 0.04s steps(1);
-  transition: background 0.04s steps(1) 0.04s ;
+  transition: box-shadow calc(var(--12fps-frame-duration)/2) steps(1);
+  transition: background calc(var(--12fps-frame-duration)/2) steps(1) calc(var(--12fps-frame-duration)/2) ;
 }
 
 .title a {
   z-index: 1;
   color: var(--btn-main-color, maroon); 
-  transition: all 0.08s steps(2);
+  transition: all var(--12fps-frame-duration) steps(2);
 }
 
 .title::after{ /* half-tone mask */
@@ -65,7 +67,7 @@ Example configuration (set these CSS variables externally):
 }
 
 .title:hover {
-  transition: box-shadow 0.16s steps(3);
+  transition: box-shadow calc(2 * var(--12fps-frame-duration)) steps(3);
   border: solid 4px transparent;
   box-shadow: 0 0 0 2px var(--btn-hover-bg-color, red);
   background-color: var(--btn-hover-bg-color, red);
@@ -78,7 +80,7 @@ Example configuration (set these CSS variables externally):
 .title:hover a {
     color: var(--btn-hover-color, white); 
     transform: scale(0.95);
-    transition: transform 0.16s steps(3);
+    transition: transform calc(2 * var(--12fps-frame-duration)) steps(3);
 }
 
 </style>
