@@ -52,10 +52,10 @@
 
         <!-- Title -->
         {% if site.title %}
-
+          {% assign homeUrl= "/" | absolute_url %}
           {% include title-btn.html
             title = site.title
-            link = "/"
+            link =  homeUrl
           %} 
 
         {% endif %}
@@ -93,14 +93,7 @@
       };
     </script>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-    <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/color-picker.js"></script>
-    <script>
-      var sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '/blog/search.json'
-      })
-    </script>
+
   </body>
 </html>
