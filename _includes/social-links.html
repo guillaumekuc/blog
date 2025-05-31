@@ -1,0 +1,58 @@
+<!-- 
+# social-links
+
+Example include
+    include social-links.html 
+        links = [array]
+
+w/ expected format:
+links:
+  - title: "Title"
+    url: "https://url.com"
+    icon: "fa-solid fa-palette"
+  ...
+
+Example configuration (set these CSS variables externally):
+.social-links {
+  --btn-size: 24px;
+  --btn-main-color: red; /* optional */
+  --btn-hover-colver: red; /* optional */
+}
+
+Required: 
+- Font awesome context
+
+-->
+
+<div class="social-links">
+    {% for item in include.links %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener" class="social-link" title="{{ item.title }}">
+        {% if item.icon %}
+          <i class="{{ item.icon }}"></i>
+        {% else %}
+          [{{ item.title }}]
+        {% endif %}
+      </a>
+    {% endfor %}
+</div>
+
+<style> 
+.social-links {
+
+  text-align: center;
+  --btn-spacer: calc(var(--btn-size) / 3);
+  user-select: none
+}
+.social-link i {
+  margin-right: var(--btn-spacer, 8px);
+  font-size: var(--btn-size, 24px);
+  transition: all 0.08s steps(2);
+  color: var(--btn-color, inherit);
+}
+
+.social-link i:hover {
+  transform: scale(1.1);
+  transition: transform 0.16s steps(3);
+  color: var(--btn-hover-color, inherit);
+}
+</style>

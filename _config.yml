@@ -51,41 +51,30 @@ colors:
       
 
 socials:
-  - social:
-      title: "Portfolio"
-      url: "https://guillaumekuc.art"
-      icon: "fa-solid fa-palette"
-      alt: "Portfolio"
-  - social:
-      title: "ArtStation"
-      icon: "fa-brands fa-artstation"
-      url: "https://artstation.com/guillaumekuc"
-      alt: "ArtStation"
-  - social:
-      title: "SoundCloud"
-      icon: "fa-brands fa-soundcloud"
-      url: "https://soundcloud.com/guillaume-kuc-945925946"
-      alt: "SoundCloud"
-  - social:
-      title: "Github"
-      url: "https://github.com/guillaumekuc"
-      icon: "fa-brands fa-github"
-      alt: "Github"
-  #- social:
-      #title: "LinkedIn"
-      #icon: "fa-brands fa-linkedin"
-      #url: "https://www.linkedin.com/in/guillaumekuc/"
-      #alt: "LinkedIn"
-  - social:
-      title: "Bluesky"
-      url: "https://bsky.app/profile/guillaumekuc.bsky.social"
-      icon: "fa-brands fa-bluesky"
-      alt: "Bluesky"
-  - social:
-      title: "Email: guillaume@guillaumekuc.com"
-      icon: "fa-solid fa-envelope"
-      url: "mailto:guillaume@guillaumekuc.com"
-      alt: "guillaume@guillaumekuc.com"
+  - title: "Portfolio"
+    url: "https://guillaumekuc.art"
+    icon: "fa-solid fa-palette"
+    alt: "Portfolio"
+  - title: "ArtStation"
+    icon: "fa-brands fa-artstation"
+    url: "https://artstation.com/guillaumekuc"
+    alt: "ArtStation"
+  - title: "SoundCloud"
+    icon: "fa-brands fa-soundcloud"
+    url: "https://soundcloud.com/guillaume-kuc-945925946"
+    alt: "SoundCloud"
+  - title: "Github"
+    url: "https://github.com/guillaumekuc"
+    icon: "fa-brands fa-github"
+    alt: "Github"
+  - title: "Bluesky"
+    url: "https://bsky.app/profile/guillaumekuc.bsky.social"
+    icon: "fa-brands fa-bluesky"
+    alt: "Bluesky"
+  - title: "Email"
+    icon: "fa-solid fa-envelope"
+    url: "mailto:guillaume@guillaumekuc.com"
+    alt: "guillaume@guillaumekuc.com"
 
 authors:
   guillaumekuc:
