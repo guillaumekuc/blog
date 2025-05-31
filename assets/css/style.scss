@@ -22,75 +22,6 @@
   scroll-behavior: smooth !important;
 }
 
-header h1 {
-  display: flex;
-  text-align: center;
-  margin:0 !important;
-  text-transform: unset;
-  border: solid 4px transparent;
-  box-shadow: 0 0 0 -1px var(--primary-color);
-  border-radius: 10px;
-  transition: box-shadow 0.04s steps(1);
-  transition: background 0.04s steps(1) 0.04s ;
-position: relative;
-}
-
-
-
-
-
-header h1 a {
-  color: var(--darker-primary-color); 
-  transition: all 0.08s steps(2);
-
-  
-  background-clip: padding-box;
-
-}
-
-header h1::after{
-  display: flex;
-  z-index: 9999;
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top:50%;
-  left:50%;
-  height: 100%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-      mask: url("../img/dots1.svg");
-  mask-size: 110px;
-  mask-type: alpha;
-  background-color: rgba(255,255,255,0.75);
-  border: 0px;
-  border-radius:10px;
-  opacity: 0;
-  transform-origin: center;
-
-
-}
-header h1:hover {
-
-  transition: box-shadow 0.16s steps(3);
-  border: solid 4px transparent;
-  box-shadow: 0 0 0 2px var(--primary-color);
-  background-color: var(--primary-color);
-}
-
-header h1:hover::after {
-  opacity:1;
-
-}
-header h1:hover a {
-
-     color: var(--white-value); 
-      filter: saturate(50%);
-    transform: scale(0.95);
-    transition: transform 0.16s steps(3);
-
-
-}
 
 
 a {
@@ -142,6 +73,12 @@ header {
   margin-right: auto;
   margin-left: auto; 
   margin-bottom: 15px;
+}
+
+.title {
+  --btn-main-color: var(--darker-primary-color);
+  --btn-hover-color: white;
+  --btn-hover-bg-color: var(--primary-color);
 }
 
 h1 {

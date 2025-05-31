@@ -1,0 +1,83 @@
+<!-- 
+Example include
+    include title-btn.html 
+        link = [url]
+        title = [string]
+
+Example configuration (set these CSS variables externally):
+  .title {
+    --btn-main-color: red;
+    --btn-hover-bg-color: red;
+    --btn-hover-color: white;
+  }
+-->
+
+<h1 class="title">
+    <a href='{{ include.link | "#" }}'>{{ include.title | default: "Title" }}</a>
+</h1>
+
+
+<style>
+
+.title {
+  --half-tone: url("https://guillaumekuc.github.io/blog/assets/img/dots1.svg");
+
+  display: flex;
+  position: relative;
+  margin:0 ;
+  border: solid 4px transparent;
+  box-shadow: 0 0 0 -1px var(--btn-hover-bg-color, red);
+  border-radius: 10px;
+  transition: box-shadow 0.04s steps(1);
+  transition: background 0.04s steps(1) 0.04s ;
+}
+
+.title a {
+  z-index: 1;
+  color: var(--btn-main-color, maroon); 
+  transition: all 0.08s steps(2);
+}
+
+.title::after{ /* half-tone mask */
+  display: flex;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+
+  mask: var(--half-tone);
+  mask-size: 110px;
+  mask-type: alpha;
+  background-color: white;
+
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  border-radius:10px;
+
+}
+
+.title:hover {
+  transition: box-shadow 0.16s steps(3);
+  border: solid 4px transparent;
+  box-shadow: 0 0 0 2px var(--btn-hover-bg-color, red);
+  background-color: var(--btn-hover-bg-color, red);
+}
+
+.title:hover::after {
+  opacity:0.75;
+}
+
+.title:hover a {
+    color: var(--btn-hover-color, white); 
+    transform: scale(0.95);
+    transition: transform 0.16s steps(3);
+}
+
+</style>
