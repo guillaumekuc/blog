@@ -22,6 +22,7 @@
     <div class="wrapper">
       <header>
 
+        <!-- Theme Selector -->
         <div class="colorPicker"> 
 
           {% if site.colors %}
@@ -33,9 +34,9 @@
             <span class="colorPickerSeparator">·</span>
             <i class="fa-solid fa-circle-half-stroke themeToggle"></i>
 
-          
         </div>
 
+        <!-- Avatar -->
         {% if site.profile and site.logo %}
 
           {% assign portfolio = site.socials |  where_exp: "item", "item.title == 'Portfolio'" | first %} 
@@ -49,6 +50,7 @@
 
         {% endif %}
 
+        <!-- Title -->
         {% if site.title %}
 
           {% include title-btn.html
@@ -58,6 +60,7 @@
 
         {% endif %}
 
+        <!-- Socials -->
         {% if site.socials %}
 
           {% include social-links.html 
@@ -66,26 +69,20 @@
 
         {% endif site.socials %}
 
-        <!-- Search Input -->
-        <div class="search-input">
-          <input type="text" id="search-input" placeholder="Search blog posts..">
-          <ul id="results-container"></ul>
-        </div>
-
+        <!-- Search -->
+        {% include search-input.html %}
 
       </header>
       <section>
-
 
       {{ content }}
 
       </section>
 
-
+      <!-- Back To Top -->
       {% include back-to-top.html %}
 
       <footer>
-
         <p><small>{{site.credits}}</small></p>
       </footer>
 
