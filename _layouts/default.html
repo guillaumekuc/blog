@@ -51,9 +51,11 @@
 
         {% endif %}
 
-        <div id="title">
-        <h1><a href='{{ "/" | absolute_url }}'>{{ site.title | default: site.github.repository_name }}</a></h1>
-        </div>
+
+        {% include title-btn.html
+          title = site.title
+          link = "/"
+        %} 
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
@@ -126,7 +128,6 @@
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/color-picker.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/back-to-top.js"></script>
     <script>
       var sjs = SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
