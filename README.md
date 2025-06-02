@@ -27,26 +27,26 @@ Markdown-based content
 	- Bounce animation on hover: squash and stretch
 	- Smooth scroll back to top
 - Search bar
+	- Expandable
 - Reading time indicator
 - Tags
 - Color theme switch
 	- 5 Hues of equal lightness value (Lab color mode): Teal, Coral, Olive, Lavander, Bronze
 	- Natural looking color variants (hue and value shifts mimicking shadows using precise Lab color mode calculations)
 	- Dynamic fav icon replacement using current active color
+	- Session persistence via localStorage
 - Copy Link button in blog articles
 - Abstract flowy Background
 	- Discreete Light grey gradient
 	- Midjourney generated abstract motif
 - Overall style
 	- Steps animations, approximating 12fps animation style (ref trad anim/retro games)
-	- Print design/Content first (Dofus mag reference)
+	- Print design inspiration/Content first
 	- Half-tones
 
 ### Features Candidates
 
-- Better search bar design
 - Dark theme
-- Color theme persistence
 - Lightness value slider
 - Tag pages
 - Pinned articles
@@ -56,8 +56,6 @@ Markdown-based content
 
 ## Bug queue
 
-- Layout breaks when typing in the search input field on mobile screen sizes.
-- Responsive layout  breaks for the back to top button on intermediate screen sizes (button partly off screen).
 
 ## Contact
 
