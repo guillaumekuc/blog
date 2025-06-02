@@ -126,16 +126,6 @@ header p {
   width: 100%;
 }
 
-
-
-
-#results-container {
-  text-align: left;
-}
-
-
-
-
 .reading-time {
   display: block;
   margin: auto;
@@ -188,97 +178,7 @@ header p {
 
 }
 
-.colorPicker {
-  display: flex;
-  box-sizing: content-box;
-  flex-direction: row;
-  margin-bottom: 15px;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 20px;
-}
 
-.colorPicker > * {
-  margin-right: 8px;
-  transition: all 0.08s steps(2);
-}
-
-.colorPicker > *:hover {
-  transition: all 0.16s steps(3);
-} 
-
-.colorPicker > *.active {
-  transition: all 0.08s steps(2);
-} 
-
-.coloredDot {
-
-  display: flex;
-  align-items: center;
-  position: relative;
-  box-sizing: border-box;
-  transform-origin: center;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 2px transparent;
-}
-
-.coloredDot::after{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  content:"";
-  box-sizing: content-box;
-   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  opacity:0;
-    /* mask */
-
-}
-
-
-
-.coloredDot:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-
-
-}
-
-.coloredDot.active {
-  border: solid var(--white-value) 2px;
-  box-shadow: 0 0 0 1px var(--darker-primary-color);
-
-}
-
-.coloredDot.active::after{
-  opacity: 0;
-  mask: url("../img/denim.png");
-  mask-size: 240px;
-  mask-type: alpha;
-}
-
-.coloredDot:hover::after{
-  opacity: 0;
-}
-
-
-.colorPickerSeparator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  line-height: 1;
-  color: var(--medium-value);
-  width:4px;
-  height:16px;
-}
 
 .themeToggle {
   display: inline-flex;

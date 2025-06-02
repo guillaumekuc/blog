@@ -17,24 +17,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+
   </head>
   <body>
+    <script>
+      //set color vars before DOM is created
+      const storedPrimaryColor = localStorage.getItem('themePrimaryColor');
+      const storedDarkerColor = localStorage.getItem('themeDarkerColor');
+      if (storedPrimaryColor && storedDarkerColor) {
+        document.documentElement.style.setProperty('--primary-color', storedPrimaryColor);
+        document.documentElement.style.setProperty('--darker-primary-color', storedDarkerColor);
+      }
+    </script>    
     <div class="wrapper">
       <header>
 
         <!-- Theme Selector -->
-        <div class="colorPicker"> 
+        {% if site.colors %}
 
-          {% if site.colors %}
-              {% for item in site.colors %}
-                <a class="coloredDot {% if item.color.default %} active default{% endif %}" style='background-color: {{ item.color.primary }}' title="{{ item.color.name }}" > 
-                </a>
-              {% endfor%}
-            {% endif %}
-            <span class="colorPickerSeparator">·</span>
-            <i class="fa-solid fa-circle-half-stroke themeToggle"></i>
+          {% include theme-selector.html 
+            colors = site.colors
+          %}
+        {% endif %}
 
-        </div>
 
         <!-- Avatar -->
         {% if site.profile and site.logo %}

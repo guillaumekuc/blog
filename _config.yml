@@ -29,22 +29,17 @@ repository: guillaumekuc/blog.git
 
 
 colors:
-  - color:
-      name: "Teal"
-      primary: "#20a0af" 
-      default: true
-  - color: 
-      name: "Coral"
-      primary: "#F26061"
-  - color: 
-      name: "Olive"
-      primary: "#699E48"
-  - color: 
-      name: "Lavender"
-      primary: "#b080c2"
-  - color: 
-      name: "Bronze"
-      primary: "#a68e53"
+  - name: "Teal"
+    color: "#20a0af" 
+    default: true
+  - name: "Coral"
+    color: "#F26061"
+  - name: "Olive"
+    color: "#699E48"
+  - name: "Lavender"
+    color: "#b080c2"
+  - name: "Bronze"
+    color: "#a68e53"
      
       
 

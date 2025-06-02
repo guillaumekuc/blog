@@ -1,0 +1,79 @@
+<!-- 
+Required: Font awesome 
+-->
+
+<div class="theme-selector"> 
+    {% for item in include.colors %}
+      <a class="coloredDot {% if item.default %} default{% endif %}" style='background-color: {{ item.color }}' title="{{ item.name }}" > 
+      </a>
+    {% endfor%}
+  <span class="theme-selector-separator">·</span>
+  <i class="fa-solid fa-circle-half-stroke themeToggle"></i>
+
+</div>
+
+<style>
+  .theme-selector {
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: row;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  --12fps-frame-duration: 0.08s; /*apprx. duration of a frame in s, 12 fps */
+}
+
+.theme-selector > * {
+  margin-right: 8px;
+  transition: all var(--12fps-frame-duration) steps(2);
+}
+
+.theme-selector:last-child {
+  margin-right: 0px;
+}
+
+.theme-selector > *:hover {
+  transition: all calc(2 * var(--12fps-frame-duration)) steps(3);
+} 
+
+.theme-selector > *.active {
+  transition: all var(--12fps-frame-duration) steps(2);
+} 
+
+.coloredDot {
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  transform-origin: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+.coloredDot:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.coloredDot.active {
+  border: solid var(--white-value) 2px;
+  box-shadow: 0 0 0 1px var(--darker-primary-color);
+}
+
+.colorPickerSeparator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  color: var(--medium-value);
+  width:4px;
+  height:16px;
+}
+
+</style>

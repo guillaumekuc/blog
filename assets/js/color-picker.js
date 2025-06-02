@@ -1,15 +1,5 @@
-const defaultColor = hexToRgb(window.config.colors.find(item => 
-      item.color && item.color.default
-    ).color.primary);
 
-const defaultDot =  Array.from(document.querySelectorAll(".coloredDot"))
-  .find(item => item.classList.contains("default"));
-
-
-if (defaultColor){
-    updateColorTheme(defaultColor, defaultDot);
-}
-
+initializeTheme();
 
 document.querySelectorAll('.coloredDot').forEach(dot => {
     dot.addEventListener('click', event => {
@@ -17,9 +7,25 @@ document.querySelectorAll('.coloredDot').forEach(dot => {
     });
 });
 
+function initializeTheme() {
+    const savedThemeIndex= localStorage.getItem('themeIndex');
+    if (savedThemeIndex) {
+        const dots= document.querySelectorAll(".coloredDot");
+        const savedDot = dots[savedThemeIndex];
+        const savedColor = window.getComputedStyle(savedDot).backgroundColor;
+        updateColorTheme(savedColor, savedDot)     
+    } else {
+        const defaultDot =  Array.from(document.querySelectorAll(".coloredDot")).find(item => item.classList.contains("default"));        
+        const defaultColor = hexToRgb(window.config.colors.find(item => 
+          item.default
+        ).color);
+        if (defaultColor){
+            updateColorTheme(defaultColor, defaultDot);
+        }
+    }
+}
 
 function updateColorTheme(color, element) {
-    console.log("updateColorTheme");
     // Remove active from all, add to clicked
     document.querySelectorAll('.coloredDot').forEach(d => d.classList.remove('active'));
     if (element){
@@ -27,17 +33,22 @@ function updateColorTheme(color, element) {
     }  
     // Compute colors
     const darker = getDarkerColorLab(color);
-    const darkest = getDarkerColorLab(darker);
 
     //update CSS variables
     document.documentElement.style.setProperty('--primary-color', color);
     document.documentElement.style.setProperty('--darker-primary-color', darker);
-    document.documentElement.style.setProperty('--darkest-primary-color', darkest);
 
     //update favicon
     createDotFavicon(color);
-}
 
+    //store Theme Index
+    if (element) {
+        const dotIndex = Array.from(document.querySelectorAll('.coloredDot')).indexOf(element);
+        localStorage.setItem('themeIndex', dotIndex);
+        localStorage.setItem('themePrimaryColor', color);
+        localStorage.setItem('themeDarkerColor', darker);
+    }
+}
 
 function getDarkerColorLab(rgbColor, offset = -20) {
     const color = rgbColor;
