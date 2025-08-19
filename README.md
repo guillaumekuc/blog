@@ -47,6 +47,8 @@ Markdown-based content
 ### Features Candidates
 
 - Dark theme
+- Keep alive animations
+- Animated background
 - Lightness value slider
 - Tag pages
 - Pinned articles
@@ -56,6 +58,7 @@ Markdown-based content
 
 ## Bug queue
 
+- Portfolio link on avatar not working.
 
 ## Contact
 
