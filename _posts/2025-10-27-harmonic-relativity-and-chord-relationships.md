@@ -49,7 +49,6 @@ A useful harmony system should not treat chromaticism, modal mixture, or tonal a
 
 The state of affairs calls for **a fundamental re-framing**, not yet another patch.
 
----
 
 ## Chord Relationships promises
 
@@ -67,7 +66,6 @@ It also describes harmony in **relative terms** rather than absolutes, matching 
 
 For that reason, the system proves especially useful to **game and film composers**, as well as **improvisers**, who see harmonic gestures as direct pathways toward the emotional effects they want to evoke in listeners.
 
----
 
 ## Notation
 
@@ -99,14 +97,11 @@ In essence, this framework maps **all possible chord-to-chord movements** in an 
 It doesn’t dictate what should be done — it simply lays out the **harmonic landscape** available to explore.
 
 
----
-
 ## Emotional colors
 
 To illustrate what makes this system as useful as it is, let's take a look at some colorful CRs.  
 
----
-
+<br>
 ### Example 1 – M ♭II M
 
 <audio controls>
@@ -120,8 +115,7 @@ It often feels *spicy, Spanish or Mexican, warm, tense, fiery, flamenco-like.*
 Whenever you want to evoke that flavor, you can turn to this CR — in improvisation or composition alike.  
 All you'd need is a major chord moving a minor second upward into another major chord.
 
----
-
+<br>
 ### Example 2 – M III M
 
 <audio controls>
@@ -132,8 +126,7 @@ All you'd need is a major chord moving a minor second upward into another major 
 **M III M** has a completely different energy — *lush, radiant, surreal, majestic, bright.*  
 Once you recognize that sound and associate it with a feeling, it becomes a reliable tool in your harmonic vocabulary.
 
----
-
+<br>
 ### Example 3 – m VII M
 
 <audio controls>
@@ -143,8 +136,7 @@ Once you recognize that sound and associate it with a feeling, it becomes a reli
 
 **m VII M** might feel *melancholic, yearning, tragic, or resigned* — yet still *dignified* or *faintly luminous.*  
 
----
-
+<br>
 ### Example 4 – m ♭III m
 
 <audio controls>
@@ -157,7 +149,6 @@ In contrast, **m ♭III m** conveys a deeper, heavier kind of tragedy — darker
 The differences can be subtle, which is why *listening and feeling* each CR is essential.  
 This system emphasizes **emotional effect** above theoretical labeling: there’s no layer between your intent and the harmonic gesture that delivers it.
 
---- 
 
 ## Stringing CRs together
 
@@ -172,8 +163,7 @@ You simply:
 That’s it.  
 As long as the CRs align emotionally, the resulting progression will reliably elicit the feeling you intend — at least from a harmonic standpoint.  
 
----
-
+<br>
 ### Example 1 – Tender and Melancholic
 
 Let’s create a **tender-sounding** progression, something with a bit of **melancholy and attachment**.  
@@ -195,8 +185,8 @@ And with a simple melody added for contour:
   Your browser does not support the audio element.
 </audio>
 
----
 
+<br>
 ### Example 2 – Unease and Wonder
 
 Now let’s try something contrasting: a sound that conveys **friction, wonder, and unease**.  
@@ -221,7 +211,6 @@ And with melody:
 
 Hopefully it doesn’t sound cliché, but instead remains on target emotionally — illustrating how effective this approach can be for scoring or expressive improvisation.  
 
----
 
 ## Closing thoughts
 
