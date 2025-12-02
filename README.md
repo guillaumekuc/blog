@@ -11,6 +11,44 @@ Base theme: Minimal
 Hosted on GitHub Pages
 Markdown-based content
 
+## Setup
+
+Jekyll requires Ruby and Bundler to run locally. If `bundle exec jekyll serve` doesn't work, you likely need to install Ruby first.
+
+### Windows Installation
+
+1. **Install Ruby:**
+   - Download RubyInstaller from https://rubyinstaller.org/
+   - Choose the **Ruby+Devkit** version (recommended)
+   - Run the installer and follow the prompts
+   - **Important:** After installation, close and reopen your terminal/PowerShell for PATH changes to take effect
+
+2. **Verify Ruby installation:**
+   ```powershell
+   ruby --version
+   ```
+
+3. **Install Bundler (global install, can be run from any directory):**
+   ```powershell
+   gem install bundler
+   ```
+
+4. **Install Jekyll dependencies (run from project directory):**
+   ```powershell
+   bundle install
+   ```
+
+5. **Run Jekyll (from project directory):**
+   ```powershell
+   bundle exec jekyll serve
+   ```
+
+### Troubleshooting
+
+- If `bundle` or `ruby` commands are not recognized, Ruby is not installed or not in your PATH
+- Make sure to restart your terminal after installing Ruby
+- On Windows, the Gemfile includes platform-specific gems (`tzinfo-data`, `wdm`) for better compatibility
+
 ## Workflow
 
 - Local dev: 'bundle exec jekyll serve'

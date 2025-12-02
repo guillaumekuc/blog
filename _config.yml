@@ -78,6 +78,9 @@ authors:
 
 credits: '© 2025 <a href="https://guillaumekuc.github.io/links">Guillaume Kuc</a> &mdash; Powered by <a href="https://jekyllrb.com/">Jekyll</a> &mdash; Base theme: <a href="https://github.com/pages-themes/minimal">Minimal</a>'
 
+# Permalink structure (uses title only, no date paths)
+permalink: /:title/
+
 # Build settings
 #theme: minima
 remote_theme: pages-themes/minimal
