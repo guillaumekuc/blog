@@ -74,6 +74,12 @@ Jekyll requires Ruby and Bundler to run locally. If `bundle exec jekyll serve` d
 	- Dynamic fav icon replacement using current active color
 	- Session persistence via localStorage
 - Copy Link button in blog articles
+- Image Lightbox
+	- Click any image or GIF in blog posts to view in full size
+	- Gallery navigation with keyboard arrows or on-screen buttons
+	- Touch/swipe support for mobile devices
+	- Automatic image wrapping (no need to modify markdown)
+	- Uses GLightbox library (loaded via CDN)
 - Abstract flowy Background
 	- Discreete Light grey gradient
 	- Midjourney generated abstract motif
