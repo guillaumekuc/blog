@@ -55,7 +55,7 @@ A second experiment used a vector field to guide particles motion, leaving trail
 
 I ended up not keeping these animated backgrounds for the sake of simplicity, but it was interesting none-the-less.  
 
-The codebase is now available for consultation on github. Line count sits at around 9000, which reflects the SPA (Single Page Application) and the multidisciplinary nature of the portfolio. Time allocated to the MKTG bucket should drop significantly in the coming months to make space for other projects. 
+The codebase is now available for consultation on [github](https://github.com/guillaumekuc/portfolio). Line count sits at around 9000, which reflects the SPA (Single Page Application) and the multidisciplinary nature of the portfolio. Time allocated to the MKTG bucket should drop significantly in the coming months to make space for other projects. 
 
 ## Product Development
 
