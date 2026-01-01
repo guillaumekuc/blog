@@ -25,7 +25,7 @@ Happy New Year 2026!
 
 I present the following visual piece this month. 
 
-![](/blog/assets/newsletter-202512/funk-you-cable-car-madakos.jpg)
+![](/blog/assets/newsletter-202512/funk-you-cable-car-madakos-mSize.jpg)
 
 Overall, a bit more prep went in than last time: some world-building was written first, and appropriate reference gathering was done before starting.  
 
