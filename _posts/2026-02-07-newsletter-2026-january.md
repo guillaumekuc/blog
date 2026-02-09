@@ -38,7 +38,7 @@ Improvisation relies on “transient hypofrontality”: attenuated self-monitori
 
 Next time, I need a clearer separation of roles: improviser vs. editor/composer. They do not mesh. I still got somewhere and picked up a few more audio production tricks in passing, such as: using a multiband compressor to highlight the low fundamentals of a low tuned guitar, paired with a bass amp sim to preserve the low-end, as an example ([Reaper](https://www.reaper.fm/), [Amplitube](https://www.ikmultimedia.com/products/amplitube5/), [Melda Production](https://www.meldaproduction.com/))
 
-In parallel, I’ve been experimenting with “harmonic glyphs”: labeled sets of three Chord Relationships (four chords). The goal is to compose and improvise with these glyphs. That’s classic chunking: it reduces the short-term memory load to support coherent macro-form composition in real-time. So far it is promising, I mainly need to grow the size of the accessible glyph library (active vocabulary) progressively.
+In parallel, I’ve been experimenting with “harmonic glyphs”: labeled sets of three Chord Relationships (four chords). The goal is to compose and improvise with these glyphs. That’s classic chunking: it reduces the short-term memory load to support coherent form in real-time improvisation. So far it is promising, I mainly need to grow the size of the accessible/active glyph vocabulary progressively.
 
 ### Painting
 
