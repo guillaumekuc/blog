@@ -10,13 +10,12 @@ tags:
   - learnings
   - processes
   - visioglobe
-permalink: /blog/digital-indoor-mapping-experience/
 published: true
 ---
 
 # Notes from my Experience in Digital Indoor Mapping
 
-The last job I worked in was a 15-20 people Saas company which produced and sold digital indoor maps and associated software. I was hired as part of the production team and eventually doubled as an internal tools developer. I stayed there 3+ years. 
+The last job I worked in was a [15-20 people SaaS company](https://visioglobe.com/) that produced and sold digital indoor maps and associated software. I was hired as part of the production team and eventually doubled as an internal tools developer. I stayed there 3+ years. 
 The following notes are a compression of the core learning I got from that place, its constraints and its people. 
 ## Developer Constraints
 
@@ -76,5 +75,7 @@ People should be excellent, but never indispensable.
 In such a setting you’d also find that “company culture” is legitimate infrastructure. Informal rituals, such as morning coffee conversations, shared meals, team events, appear inefficient at first glance. They are not: they build trust. When trust is present, everything flows smoothly and the work appears to take care of itself. The absence of it manifests as friction everywhere.
 
 Humans evolved for tribes. We live and work best in tribes. Transparency, consensus, rituals, alignment and shared identity all matter.
+
+—-
 
 These notes capture the operating conditions of a 15–20 person indoor-mapping shop: constrained developer bandwidth, deadline-driven production, micro-tools built on the fly, and the need for shared institutional memory.
