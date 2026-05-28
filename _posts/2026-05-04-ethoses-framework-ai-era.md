@@ -5,15 +5,15 @@ date: 2026-05-04
 categories: 
 layout: post
 tags:
-	- ai
-	- future-of-work
-	- labor-markets
-	- arts-philosophy
-	- cultural-economics
-	- creative-industries
-	- meaning-making
-	- visual-arts
-	- music
+ - ai
+ - future-of-work
+ - labor-markets
+ - arts-philosophy
+ - cultural-economics
+ - creative-industries
+ - meaning-making
+ - visual-arts
+ - music
 permalink: 
 published: true
 ---
@@ -58,13 +58,13 @@ I will go further and say, AI should over time mechanistically out-perform artis
 
 However there is a moat. When provenance is labeled, preferences shifts strongly in favor of human made art and music. AI generations do not carry the same "celebration of human potential" innate story. We value the effort itself, which is a large part of why stop motion movies like Kubo and the Two Strings elicit such a strong response despite being an inefficient path to the result by modern standards. The meaning behind the work being tied to the creators creates a strong anti-AI bias. **Substitution works technically but collapses culturally** the moment the source is disclosed. That bias is why Cara exists and gained popularity: an Artstation/Instagram hybrid social media feed for artists with an explicit no-AI rule in portfolios.[^13] That's also why Chess players are still largely appreciated despite having been out-competed by Chess engines for a while already now. That's also why AI users fail to obtain similar respect even when putting out similar outputs. Below is the work of Juliette Brocal & co: 100% hand-made.
 
-![](https://www.youtube.com/watch?v=EH56ljIb3eE)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EH56ljIb3eE" frameborder="0" allowfullscreen></iframe>
 
 I must note this same anti-AI bias and attribution problem is probably part of the reason why we see junior developers struggling to get in. **One would expect AI tools to shrink the gap between a junior and a senior**, making juniors a better value proposition overall than they were before when compared against more expensive senior devs. But **instead we see a collapse in junior positions** while seniors are still able to switch jobs and get hired with relative ease. The reason is possibly that because it's understood that seniors got where they are through craft and hand-written code, respect is more easily given. Juniors on the other hand might be capable of producing similar outputs when using AI tools, but because of the anti-AI bias, the value of the work is deemed lower when judged on Craft ethos. Pre AI-era and hand-written work is thus disproportionately valuable when it comes to signaling, even though increasingly the on-the-job expectation is to work as an LLM operator under Industrial ethos, rather than as a Craft person.
 
 My interest was also piqued when I saw the band Angine de Poitrine blew up online. It is a guitar & bass + looper and drums duet with the particularity of using 24 EDO instruments. That is to say, the guitar and bass have 24 frets per octave instead of the usual 12, giving the band access to quarter tones, a smaller unit interval than is typically used. The music is weird, full of what our ears with all their priors would read as dissonant. I wouldn't have bet that general audiences would take a concerted interest in microtonal music, and yet here we are. I interpret it as an immune reaction to AI art. Microtonal music is almost entirely out of the training datasets. This is not music that can be AI generated today. It is unmistakably human made. I foresee this pattern occuring more and more. I expect faster habituation and an increased need for structural novelty (as opposed to surface novelty) from audiences as AI floods markets with infinite variations of the same thing. Here, AI acts as a forcing function towards more innovation and creative R&D on the Craft side in the same way that the invention of the photograph pushed painter towards inventing new visual languages such as Impressionism, Post Impressionism, Expressionism or Cubism. Hopefully this means other tuning systems such as 31 EDO should see their time come sooner rather than later (see Mike Battaglia's performance). I should also note that tools that unlock entirely new creative areas to be explored seem like they might become particularly valuable for that purpose (in this example, 24 or 31 EDO instruments).
 
-![](https://www.youtube.com/watch?v=Te1HkBx7rDw)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Te1HkBx7rDw" frameborder="0" allowfullscreen></iframe>
 
 ## Economic limits
 
@@ -85,7 +85,9 @@ The difficulty lies in the fact that in the same basket you also inadvertently c
 
 If we were to conclude that AI generation is a potentially potent tool that could complement our workflows, or that the ambient productivity pressures justify using it in commercial contexts, then we have to answer the question of how to supply legitimacy and trust when authorship gets diluted and when the artist's hand gets buried. Fortunately that question has been largely answered by pop stars and the producer-musician archetype. It is typical for such auteurs to release highly produced tracks with many names to their credits: distributing the load across many individuals. How then can an audience remain confident that the top-liner can stand on their own and is deserving of their trust ? The solution seem to be to periodically release deliberately stripped down, minimal, often acoustic, songs and performances. Below is a Lady Gaga song, in its fully produced version first, and then one of several intimate minimal renditions of that same track that she released.
 
-![Lady Gaga - Disease (Official Music Video)](https://www.youtube.com/watch?v=fmC6b6_ovZY) ![Lady Gaga - Disease (The Poison Live)](https://www.youtube.com/watch?v=Et31X1n5kR8)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fmC6b6_ovZY" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Et31X1n5kR8" frameborder="0" allowfullscreen></iframe>
 
 An other pattern that's commonly seen, is to use AI heavily for what it's good at – for example search and drafting at scale – but to filter it through a human layer before presenting its output. Youtubers in the AI space, such as David Shapiro, Nate B Jones or are early adopters and rely heavily on AI at pre-production stage. However, they have not attempted to automate the delivery yet. They are still recording themselves and talking to the camera, old-school style; not generating a video avatar or an artificial voice. This is not for lack of know-how. They’ve empirically discovered that the human interface layer is genuinely valuable. Filtering, interjecting their own thoughts and reflections, establishing positioning and skin-in-the-game, providing temporal coherence and accumulated narrative, displaying tone adjustments and micro expressions as authenticators… The presenter, by showing up models that the information presented matters, without which an audience is unable to care.
 
