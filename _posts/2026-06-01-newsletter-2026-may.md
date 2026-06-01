@@ -39,6 +39,6 @@ Through drawing, I also searched for the characters and places of the world that
 
 A few asides, since I have space left.
 
-For productivity nerds (sanity nerds) : I stumbled upon the Forster List technique from a Beeminder blogpost. It’s a simple algorithm to run over your todo lists. It leverages structured procrastination energy by ordering tasks in a nice warm-up ramp of psychologically easier tasks leading to the more aversion and difficult ones. It also reduces the cost of planning in the first place by simplifying the process into a series of binary decisions. I find it quite elegant: [Forster Lists: Or Mark Forster's Final Version | Beeminder Blog](https://blog.beeminder.com/forster/)
+For productivity nerds (sanity nerds) : I stumbled upon the Forster List technique from a Beeminder blogpost. It’s a simple algorithm to run over your todo lists. It leverages structured procrastination energy by ordering tasks in a nice warm-up ramp of psychologically easier tasks leading to the more aversion and difficult ones. It also reduces the cost of planning in the first place by simplifying the process into a series of binary decisions. I find it quite elegant: [Forster Lists, Beeminder Blog](https://blog.beeminder.com/forster/)
 
 Also, [Fantastical Calendar](https://flexibits.com/fantastical) has a very nice, clean, soothing UI and is perfect in my setup as a client for a Nextcloud calendar source.
