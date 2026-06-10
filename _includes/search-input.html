@@ -174,4 +174,15 @@ Example configuration (set these CSS variables externally):
   const searchClear = document.querySelector('#search-clear');
   searchClear.addEventListener('mousedown', event => { event.preventDefault();}); //prevents focus loss > resize > click not registering on mousedown
   searchClear.addEventListener('click', clearSearchField);
+
+  document.addEventListener('click', function(e) {
+    const tag = e.target.closest('.tag');
+    if (!tag) return;
+    const searchInput = document.querySelector('#search-input');
+    if (!searchInput) return;
+    searchInput.value = tag.textContent.trim();
+    searchInput.dispatchEvent(new InputEvent('input', { bubbles: true }));
+    searchInput.focus();
+    searchInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
 </script>

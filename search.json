@@ -6,7 +6,7 @@ layout: none
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
+      "tags"     : "{{ post.tags | join: ' #' | prepend: '#' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
       "content"  : "{{ post.content | strip_html | strip_newlines | escape }}"
