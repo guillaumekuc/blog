@@ -43,27 +43,26 @@
         {% endif %}
 
 
+        {% assign homeUrl = "/" | absolute_url %}
+
         <!-- Avatar -->
         {% if site.profile and site.logo %}
 
-          {% assign portfolio = site.socials |  where_exp: "item", "item.title == 'Portfolio'" | first %} 
-
-          {% include avatar-btn.html 
-            link = portfolio.social.url
+          {% include avatar-btn.html
+            link = homeUrl
             profilePic = site.profile
             logo = site.logo
-            title = "Go to Portfolio"
+            title = "Go to blog home"
           %}
 
         {% endif %}
 
         <!-- Title -->
         {% if site.title %}
-          {% assign homeUrl= "/" | absolute_url %}
           {% include title-btn.html
             title = site.title
-            link =  homeUrl
-          %} 
+            link = homeUrl
+          %}
 
         {% endif %}
 

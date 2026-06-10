@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "@guillaumekuc.blog"
+title: "guillaumekuc.blog"
 email: "guillaume@guillaumekuc.com"
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
@@ -76,7 +76,7 @@ authors:
     name: "Guillaume Kuc"
     url: "https://guillaumekuc.github.io/links"
 
-credits: '© 2025 <a href="https://guillaumekuc.github.io/links">Guillaume Kuc</a> &mdash; Powered by <a href="https://jekyllrb.com/">Jekyll</a> &mdash; Base theme: <a href="https://github.com/pages-themes/minimal">Minimal</a>'
+credits: '© 2025 <a href="https://guillaumekuc.github.io/links">Guillaume Kuc</a> &mdash; Powered by <a href="https://jekyllrb.com/">Jekyll</a>'
 
 # Permalink structure (uses title only, no date paths)
 permalink: /:title/

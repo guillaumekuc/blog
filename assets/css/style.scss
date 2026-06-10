@@ -15,6 +15,11 @@
   --medium-value: #c0c0c0;
   --white-value: #fff;
   --black-value: #000;
+  --sidebar-width: 384px;  /* 1/5 of 1920px */
+  --content-width: 768px; /* 2/5 of 1920px */
+  --sidebar-bg: #121212;
+  --sidebar-muted: #aaa;
+  --light-primary-color: #23def5; /* lightened+saturated primary for dark sidebar — overridden by JS */
 }
 
 
@@ -37,7 +42,8 @@ a:hover{
 }
 
 body {
-
+  padding: 0;
+  margin: 0;
   color: var(--text-color);
   background-image: url("../img/bg01.jpg");
   background-attachment: fixed ;
@@ -47,27 +53,112 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
-} 
+}
 
 body::selection {
   background-color: var(--primary-color);
   color: var(--white-value);
 }
 .wrapper {
-  
+  width: calc(100% - var(--sidebar-width));
+  max-width: var(--content-width);
+  margin: 0 0 0 var(--sidebar-width);
+  padding: 40px 50px;
+  box-sizing: border-box;
+}
+
+section {
+  float: none;
+  width: auto;
+  padding-bottom: 50px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background-color: var(--sidebar-bg);
+  color: var(--medium-value);
+  z-index: 11;
+  --primary-color: var(--light-primary-color);
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: var(--darker-primary-color);
 }
 
 header {
   display: grid;
   justify-content: center;
+  align-content: start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  padding-top: 50px;
+  background-color: var(--sidebar-bg);
+  overflow-y: auto;
+  z-index: 10;
+  box-sizing: border-box;
+}
 
+header .title {
+  --btn-main-color: var(--white-value);
+  --btn-hover-color: var(--white-value);
+  font-weight: 300;
+  padding-left: 12px;
+  padding-right: 12px;
+}
 
+header .title a small {
+  display: inline;
+  color: inherit;
+  margin-top: 0;
+}
+
+header .social-links {
+  --btn-color: var(--sidebar-muted);
+  --btn-hover-color: var(--light-primary-color);
+}
+
+header .avatar {
+  --btn-main-color: var(--light-primary-color);
+  margin-top: 1em;
+}
+
+header .search {
+  --input-main-color: var(--light-primary-color);
+}
+
+header .search-results:not(:empty) {
+  margin-top: 12px;
+}
+
+header .search-results:not(:empty)::before {
+  content: "Search Results";
+  display: block;
+  color: var(--sidebar-muted);
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+header .search-results li:hover,
+header .search-results li:hover a {
+  color: var(--light-primary-color);
 }
 
 .avatar {
-  --btn-size: 120px;
+  --btn-size: 160px;
   --btn-main-color: var(--primary-color);
-  --logo-size: 105px;
+  --logo-size: 140px;
   --logo-fill: white;
   --logo-offset-y: -7.5px;
   margin-right: auto;
@@ -91,6 +182,15 @@ header {
 
 .search {
   --input-main-color: var(--darker-primary-color);
+}
+
+.search-input {
+  box-shadow: 0 0 0 0px var(--input-main-color);
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--input-main-color);
 }
 
 h1 {
@@ -137,9 +237,27 @@ header p {
 
 
 @media print, screen and (max-width: 960px) {
-    header {
-        padding-right: 0;
-    }
+  header {
+    position: static;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    padding: 0;
+  }
+  section {
+    padding: 20px;
+  }
+  footer {
+    position: static;
+    width: 100%;
+    padding: 15px 20px;
+  }
 }
 
 .tags {
@@ -203,14 +321,14 @@ header p {
   --btn-bg-hover: var(--primary-color);
   --btn-color: white;
   --btn-size: 48px;
-  --btn-right: calc((100% - (860px + 48px * 2))/2 - 48px);
+  /* position just right of the content column, within the right empty space */
+  --btn-right: calc(100% - var(--sidebar-width) - var(--content-width) - 16px - 48px);
   --btn-bottom: 70px;
 }
 
-@media print, screen and (max-width: 1148px) {
-  /* 860+(48+48*2)*2 columnWidth + (buttonWidth + spacer * 2) *2 */
+@media print, screen and (max-width: 1232px) {
+  /* 384 sidebar + 768 content + 48 btn + 32 gap — hide when right space can't fit button */
   #back-to-top-btn {
-    /* available spacing insufficient for proper display */
     display: none;
   }
 }

@@ -13,7 +13,8 @@ Example configuration (set these CSS variables externally):
 -->
 
 <h1 class="title">
-    <a href='{{ include.link | "#" }}'>{{ include.title | default: "Title" }}</a>
+    {% assign _parts = include.title | default: "Title" | split: "." %}
+    <a href='{{ include.link | "#" }}'>{{ _parts | first }}<small>.{{ _parts | last }}</small></a>
 </h1>
 
 
