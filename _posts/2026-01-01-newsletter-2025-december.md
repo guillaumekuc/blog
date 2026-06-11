@@ -1,5 +1,5 @@
 ---
-title: Newsletter - December 2025
+title: "[Newsletter] Portfolio v2.0 Launch, Harmony Trainer Refactoring, and Digital Painting"
 author: guillaumekuc
 date: 2026-01-01
 categories: 

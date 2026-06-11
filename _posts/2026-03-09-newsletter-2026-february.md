@@ -1,5 +1,5 @@
 ---
-title: Newsletter - February 2026
+title: "[Newsletter] Procedural Guitar in Houdini, MIDI Composition, and OpenClaw Agent Setup"
 author: guillaumekuc
 date: 2026-03-09
 categories: 

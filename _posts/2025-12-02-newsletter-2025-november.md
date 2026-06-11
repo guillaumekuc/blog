@@ -1,5 +1,5 @@
 ---
-title: Newsletter - November 2025
+title: "[Newsletter] Progression Generator, CRA Game Prototype, and Portfolio Migration to Svelte"
 author: guillaumekuc
 date: 2025-12-02
 categories: 

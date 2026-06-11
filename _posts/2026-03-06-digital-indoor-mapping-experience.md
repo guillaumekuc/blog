@@ -13,8 +13,6 @@ tags:
 published: true
 ---
 
-# Notes from my Experience in Digital Indoor Mapping
-
 The last job I worked in was a [15-20 people SaaS company](https://visioglobe.com/) that produced and sold digital indoor maps and associated software. I was hired as part of the production team and eventually doubled as an internal tools developer. I stayed there 3+ years. 
 The following notes are a compression of the core learning I got from that place, its constraints and its people. 
 ## Developer Constraints

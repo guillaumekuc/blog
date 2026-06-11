@@ -1,5 +1,5 @@
 ---
-title: Newsletter - October 2025
+title: "[Newsletter] Building Chordex, the Chord Relationships Analyzer, and Infrastructure Work"
 author: guillaumekuc
 date: 2025-10-29
 categories: 

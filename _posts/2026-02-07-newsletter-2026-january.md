@@ -1,5 +1,5 @@
 ---
-title: Newsletter - January 2026
+title: "[Newsletter] Harmonic Glyphs, LLM-Curated Chord Affects, and a Recording Session"
 author: guillaumekuc
 date: 2026-02-07
 categories: 

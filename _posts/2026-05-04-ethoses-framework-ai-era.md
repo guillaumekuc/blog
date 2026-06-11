@@ -1,5 +1,5 @@
 ---
-title: Craft, Industrial, Scientific and Expressive Ethos under AI disruption
+title: Competing ethoses under AI disruption
 author: guillaumekuc
 date: 2026-05-04
 categories: 

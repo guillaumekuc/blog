@@ -1,5 +1,5 @@
 ---
-title: Newsletter - April 2026
+title: "[Newsletter] Introducing Vilja, and a Retrospective"
 author: guillaumekuc
 date: 2026-05-04
 categories: 

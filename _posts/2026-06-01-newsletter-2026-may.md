@@ -1,5 +1,5 @@
 ---
-title: Newsletter - May 2026
+title: "[Newsletter] Vilja Visual Development and CNC Funding Prep"
 author: guillaumekuc
 date: 2026-06-01
 categories: 

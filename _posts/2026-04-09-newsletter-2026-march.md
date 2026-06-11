@@ -1,5 +1,5 @@
 ---
-title: Newsletter - March 2026
+title: "[Newsletter] VR Character Pipeline, SATB Writing, and Suno AI Orchestration"
 author: guillaumekuc
 date: 2026-04-09
 categories: 
