@@ -20,6 +20,7 @@
   --sidebar-bg: #121212;
   --sidebar-muted: #aaa;
   --light-primary-color: #23def5; /* lightened+saturated primary for dark sidebar — overridden by JS */
+  --footer-height: 56px;
 }
 
 
@@ -45,11 +46,7 @@ body {
   padding: 0;
   margin: 0;
   color: var(--text-color);
-  background-image: url("../img/bg01.jpg");
-  background-attachment: fixed ;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-color: var(--sidebar-bg);
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
@@ -65,6 +62,13 @@ body::selection {
   margin: 0 0 0 var(--sidebar-width);
   padding: 40px 50px;
   box-sizing: border-box;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: url("../img/bg01.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 section {
@@ -73,17 +77,35 @@ section {
   padding-bottom: 50px;
 }
 
+section img,
+section video {
+  max-width: 100%;
+  height: auto;
+}
+
+section iframe {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: var(--sidebar-width);
+  height: var(--footer-height);
   padding: 15px 20px;
   box-sizing: border-box;
   background-color: var(--sidebar-bg);
   color: var(--medium-value);
   z-index: 11;
   --primary-color: var(--light-primary-color);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer a {
@@ -95,18 +117,41 @@ footer a:hover {
 }
 
 header {
-  display: grid;
-  justify-content: center;
-  align-content: start;
   position: fixed;
   top: 0;
   left: 0;
+  bottom: var(--footer-height);
   width: var(--sidebar-width);
-  height: 100vh;
-  padding-top: 50px;
   background-color: var(--sidebar-bg);
   overflow-y: auto;
   z-index: 10;
+  box-sizing: border-box;
+  direction: rtl;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+header::-webkit-scrollbar {
+  width: 3px;
+}
+
+header::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+header::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 2px;
+}
+
+.header-inner {
+  direction: ltr;
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -134,12 +179,36 @@ header .avatar {
   margin-top: 1em;
 }
 
+.avatar-logo {
+  color: white;
+}
+
 header .search {
   --input-main-color: var(--light-primary-color);
 }
 
 header .search-results:not(:empty) {
   margin-top: 12px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4em;
+  padding: 0;
+  margin-top: 4px;
+  font-size: 0.95em;
+}
+
+.sidebar-nav a {
+  color: var(--sidebar-muted);
+  text-decoration: none;
+  transition: color 0.48s steps(4);
+}
+
+.sidebar-nav a:hover {
+  color: var(--light-primary-color);
 }
 
 header .search-results:not(:empty)::before {
@@ -236,13 +305,40 @@ header p {
 }
 
 
+.right-col {
+  position: fixed;
+  top: 0;
+  left: calc(var(--sidebar-width) + var(--content-width));
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/guillaumekuc_feuxorion_M.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
 @media print, screen and (max-width: 960px) {
+  .right-col {
+    display: none;
+  }
+}
+
+@media print, screen and (max-width: 960px) {
+  .sidebar-nav {
+    align-items: center;
+  }
+
   header {
     position: static;
     height: auto;
     width: 100%;
+    direction: ltr;
+  }
+
+  .header-inner {
     padding: 20px;
-    box-sizing: border-box;
+    padding-bottom: 20px;
+    justify-items: center;
   }
   .wrapper {
     width: 100%;
@@ -258,6 +354,162 @@ header p {
     width: 100%;
     padding: 15px 20px;
   }
+}
+
+details.archive-year,
+details.archive-month,
+details.tag-group {
+  list-style: none;
+}
+
+details.archive-year > summary,
+details.archive-month > summary,
+details.tag-group > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+details.archive-year > summary::before,
+details.archive-month > summary::before,
+details.tag-group > summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.4em;
+  font-size: 0.7em;
+  vertical-align: middle;
+  transition: transform 0.12s steps(3);
+}
+
+details.archive-year[open] > summary::before,
+details.archive-month[open] > summary::before,
+details.tag-group[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.archive-count {
+  font-weight: 400;
+  color: var(--medium-value);
+  font-size: 0.85em;
+}
+
+.title-tag {
+  display: inline-block;
+  vertical-align: baseline;
+  color: var(--medium-value);
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-right: 0.3em;
+}
+
+details.archive-year > summary::-webkit-details-marker,
+details.archive-month > summary::-webkit-details-marker,
+details.tag-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.archive-year {
+  margin-top: 1.5em;
+}
+
+details.archive-year > summary {
+  font-size: 1.17em;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+}
+
+details.archive-year > summary:hover {
+  color: var(--darker-primary-color);
+}
+
+details.archive-month {
+  margin-top: 0.6em;
+  margin-left: 1em;
+}
+
+details.archive-month > summary {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+}
+
+details.archive-month > summary:hover {
+  color: var(--darker-primary-color);
+}
+
+details.tag-group {
+  margin-top: 1.5em;
+}
+
+details.tag-group > summary {
+  font-size: 1.17em;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+}
+
+details.tag-group > summary:hover {
+  color: var(--darker-primary-color);
+}
+
+/* — Post header: shared by post layout and feed — */
+.post-header {
+  margin-bottom: 1.5em;
+}
+
+.post-header .post-meta {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.post-title {
+  margin: 0.2em 0 0.3em;
+}
+
+.post-author {
+  margin: 0 0 0.3em;
+  font-size: 0.95em;
+}
+
+.post-tags {
+  margin: 0.3em 0;
+}
+
+.post-reading-time {
+  margin: 0.4em 0 0;
+}
+
+/* Feed-specific: title is a link */
+.post-title--linked a {
+  color: var(--title-color);
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.post-title--linked a:hover {
+  color: var(--title-color);
+  text-decoration: underline;
+}
+
+/* — Feed layout — */
+.post-feed {
+  padding-bottom: 2em;
+}
+
+.feed-post {
+  display: none;
+}
+
+.feed-post--visible {
+  display: block;
+}
+
+.feed-divider {
+  border: none;
+  border-top: 1px solid var(--light-value);
+  margin: 3em 0;
 }
 
 .tags {
@@ -317,13 +569,13 @@ header p {
 }
 
 #back-to-top-btn {
-  --btn-bg: var(--medium-value);
+  --btn-bg: var(--sidebar-bg);
   --btn-bg-hover: var(--primary-color);
   --btn-color: white;
   --btn-size: 48px;
   /* position just right of the content column, within the right empty space */
   --btn-right: calc(100% - var(--sidebar-width) - var(--content-width) - 16px - 48px);
-  --btn-bottom: 70px;
+  --btn-bottom: 15px;
 }
 
 @media print, screen and (max-width: 1232px) {

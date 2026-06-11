@@ -1,0 +1,40 @@
+{%- assign _post = include.post -%}
+{%- assign _words = _post.content | strip_html | number_of_words -%}
+{%- assign _rt = _words | divided_by: 225 | plus: 0 -%}
+{%- if _rt <= 1 -%}{%- assign _rt_label = "1 min read" -%}{%- else -%}{%- assign _rt_label = _rt | append: " min read" -%}{%- endif -%}
+
+<div class="post-header">
+  <small class="post-meta">{{ _post.date | date: "%-d %B %Y" }}</small>
+
+  <h1 class="post-title{% if include.linked %} post-title--linked{% endif %}">
+    {%- if include.linked -%}
+      <a href="{{ _post.url | relative_url }}">{{ _post.title | replace: '] ', 'XCLS' | replace: ']', ']</span>' | replace: '[', '<span class="title-tag">[' | replace: 'XCLS', ']</span>' }}</a>
+    {%- else -%}
+      {{ _post.title | replace: '] ', 'XCLS' | replace: ']', ']</span>' | replace: '[', '<span class="title-tag">[' | replace: 'XCLS', ']</span>' }}
+    {%- endif -%}
+  </h1>
+
+  <p class="post-author">
+    {%- if _post.author -%}
+      {%- if site.authors[_post.author] -%}
+        by <a href="{{ site.authors[_post.author].url }}">{{ site.authors[_post.author].name }}</a>
+      {%- else -%}
+        by {{ _post.author }}
+      {%- endif -%}
+    {%- else -%}
+      by {{ site.author }}
+    {%- endif -%}
+  </p>
+
+  {%- if _post.tags -%}
+  <p class="post-tags tags">
+    {%- for tag in _post.tags -%}<small class="tag">#{{ tag }}</small>{%- endfor -%}
+  </p>
+  {%- endif -%}
+
+  <p class="post-reading-time">
+    <span class="reading-time" title="Estimated read time">
+      <i class="fa-regular fa-clock"></i> {{ _rt_label }}
+    </span>
+  </p>
+</div>

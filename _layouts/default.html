@@ -33,11 +33,12 @@
     </script>    
     <div class="wrapper">
       <header>
+        <div class="header-inner">
 
         <!-- Theme Selector -->
         {% if site.colors %}
 
-          {% include theme-selector.html 
+          {% include theme-selector.html
             colors = site.colors
           %}
         {% endif %}
@@ -69,7 +70,7 @@
         <!-- Socials -->
         {% if site.socials %}
 
-          {% include social-links.html 
+          {% include social-links.html
             links= site.socials
           %}
 
@@ -78,6 +79,14 @@
         <!-- Search -->
         {% include search-input.html %}
 
+        <!-- Nav links -->
+        <nav class="sidebar-nav">
+          <a href="{{ '/' | relative_url }}">Feed</a>
+          <a href="{{ '/archive/' | relative_url }}">Archive</a>
+          <a href="{{ '/tags/' | relative_url }}">Tags</a>
+        </nav>
+
+        </div>
       </header>
       <section>
 
@@ -93,6 +102,7 @@
       </footer>
 
     </div>
+    <div class="right-col"></div>
     <script>
       window.config = {
         colors: {{ site.colors | jsonify }}

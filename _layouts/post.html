@@ -2,30 +2,7 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
-
-<p class="view">
-  {% if page.author %}
-    {% if site.authors[page.author] %}
-      <p class="view">by <a href="{{ site.authors[page.author].url }}">{{ site.authors[page.author].name }}</a></p>
-    {% else %}
-      <p class="view">by {{ page.author }}</p>
-    {% endif %}
-  {% else %}
-    <p class="view">by {{ site.author }}</p>
-  {% endif %}
-</p>
-
-<p>
-  {% if page.tags %}
-    {% for tag in page.tags %}
-      <small class="tag">#{{ tag }}</small>
-    {% endfor %}
-  {% endif %}
-</p>
-
-<p>{% include reading-time.html %}</p>
+{% include post-header.html post=page %}
 
 {{content}}
 

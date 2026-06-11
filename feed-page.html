@@ -1,0 +1,45 @@
+---
+layout: default
+title: Feed
+permalink: /
+---
+
+<div class="post-feed">
+  {%- for post in site.posts -%}
+  <article class="feed-post" data-index="{{ forloop.index0 }}">
+    {%- include post-header.html post=post linked=true -%}
+    <div class="feed-post-content">
+      {{ post.content }}
+    </div>
+    <hr class="feed-divider">
+  </article>
+  {%- endfor -%}
+</div>
+
+<script>
+(function () {
+  const BATCH = 5;
+  const posts = Array.from(document.querySelectorAll('.feed-post'));
+  let revealed = 0;
+
+  const observer = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) {
+      observer.disconnect();
+      revealNext();
+    }
+  }, { rootMargin: '300px' });
+
+  function revealNext() {
+    const end = Math.min(revealed + BATCH, posts.length);
+    for (let i = revealed; i < end; i++) {
+      posts[i].classList.add('feed-post--visible');
+    }
+    revealed = end;
+    if (revealed < posts.length) {
+      observer.observe(posts[revealed - 1]);
+    }
+  }
+
+  revealNext();
+})();
+</script>

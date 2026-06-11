@@ -6,17 +6,25 @@ title: Home
 <div class="home">
   {{ content }}
   
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-    </li>
+  <h2 class="post-list-heading">Archive</h2>
+
+  {%- assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+  {%- for year in postsByYear -%}
+  <details class="archive-year" open>
+    <summary>{{ year.name }} <span class="archive-count">({{ year.items | size }})</span></summary>
+    {%- assign postsByMonth = year.items | group_by_exp: "post", "post.date | date: '%B'" -%}
+    {%- for month in postsByMonth -%}
+    <details class="archive-month" open>
+      <summary>{{ month.name }} <span class="archive-count">({{ month.items | size }})</span></summary>
+      <ul class="post-list">
+        {%- for post in month.items -%}
+        <li>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | replace: '] ', 'XCLS' | replace: ']', ']</span>' | replace: '[', '<span class="title-tag">[' | replace: 'XCLS', ']</span>' }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </details>
     {%- endfor -%}
-  </ul>
+  </details>
+  {%- endfor -%}
 </div>
