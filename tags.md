@@ -16,7 +16,7 @@ permalink: /tags/
 {%- for key in sort_keys -%}
   {%- assign tag_name = key | split: "|" | last -%}
   {%- assign tag_posts = site.tags[tag_name] -%}
-<details class="tag-group" open>
+<details class="tag-group">
   <summary id="{{ tag_name }}">{{ tag_name }} <span class="archive-count">({{ tag_posts | size }})</span></summary>
   <ul class="post-list">
     {%- for post in tag_posts -%}
