@@ -21,6 +21,8 @@
   --sidebar-muted: #aaa;
   --light-primary-color: #23def5; /* lightened+saturated primary for dark sidebar — overridden by JS */
   --footer-height: 56px;
+  --ffCrimson: "Crimson Pro", Georgia, serif;
+  --ffRounded: "M PLUS Rounded 1c", "Helvetica Neue", sans-serif;
 }
 
 
@@ -48,7 +50,8 @@ body {
   color: var(--text-color);
   background-color: var(--sidebar-bg);
   min-height: 100vh;
-  font-family: "Inter", sans-serif;
+  font-family: var(--ffCrimson);
+  font-size: 18px;
   scroll-behavior: smooth;
 }
 
@@ -123,6 +126,7 @@ header {
   bottom: var(--footer-height);
   width: var(--sidebar-width);
   background-color: var(--sidebar-bg);
+  font-family: var(--ffRounded);
   overflow-y: auto;
   z-index: 10;
   box-sizing: border-box;
@@ -263,16 +267,23 @@ header .search-results li:hover a {
 }
 
 h1 {
+  font-family: var(--ffCrimson);
+}
 
-  font-family: "Inter", sans-serif;
+h1.post-title,
+h1.title {
+  font-family: var(--ffRounded);
+}
+
+h1.title {
+  letter-spacing: 0.05em;
 }
 
 h2, h3, h4, h5 {
   text-align: auto;
-  color: var(--primary-color); 
+  color: var(--primary-color);
   transition: color 0.48s steps(4);
-
-  font-family: "Inter", sans-serif;
+  font-family: var(--ffCrimson);
 }
 
 h2 {
@@ -281,9 +292,27 @@ h2 {
   transition: color 0.48s steps(4);
 }
 
-h2::before{
-  content: "› ";
+/* In-article Crimson scale — Minor Third (×1.2) from 18px base: 18/22/26/31/37 */
+h5 { font-size: 18px; }
+h4 { font-size: 22px; }
+h3 { font-size: 26px; }
+h2 { font-size: 31px; }
+h1:not(.post-title):not(.title) { font-size: 37px; }
 
+h1:not(.post-title):not(.title)::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before {
+  content: "◈ ";
+}
+
+h1:not(.post-title):not(.title),
+h2, h3, h4, h5 {
+  width: fit-content;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.1em;
+  transition: border-bottom-color 0.48s steps(4);
 }
 header p {
   text-align: center;
@@ -302,6 +331,7 @@ header p {
   border-radius: 5px;
   padding: 5px 10px;
   width: fit-content;
+  font-family: var(--ffRounded);
 }
 
 
@@ -417,7 +447,7 @@ details.archive-year > summary {
   font-size: 1.17em;
   font-weight: 600;
   color: var(--primary-color);
-  font-family: "Inter", sans-serif;
+  font-family: var(--ffRounded);
 }
 
 details.archive-year > summary:hover {
@@ -433,7 +463,7 @@ details.archive-month > summary {
   font-size: 0.95em;
   font-weight: 600;
   color: var(--primary-color);
-  font-family: "Inter", sans-serif;
+  font-family: var(--ffRounded);
 }
 
 details.archive-month > summary:hover {
@@ -448,7 +478,7 @@ details.tag-group > summary {
   font-size: 1.17em;
   font-weight: 600;
   color: var(--primary-color);
-  font-family: "Inter", sans-serif;
+  font-family: var(--ffRounded);
 }
 
 details.tag-group > summary:hover {
@@ -525,6 +555,7 @@ details.tag-group > summary:hover {
   margin-bottom: 0.5em;
   border-radius: 5px;
   font-size: 0.8em;
+  font-family: var(--ffRounded);
   text-decoration: none;
   color: var(--white-value);
   transition: all 0.08s steps(2);

@@ -33,7 +33,7 @@ The project's seed is inspired by references as diverse as Dan Simmons' Carrion 
 
 I intend to dedicate the following month to building-up the case for why such a project should get built further — through pitch-deck writing, concept art and key shots painting, as well as bounded technical demos. This is a lot of what I began doing already this month, but I will present it next month.
 
-# Retrospective
+## Retrospective
 
 The past few months following my departure from Visioglobe have been rich in exploration, which is something to be expected after 3.5 years of exploitation in the context of an interactive indoor mapping SaaS.
 
