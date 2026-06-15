@@ -1,4 +1,4 @@
-Live: https://guillaumekuc.github.io/blog
+Live: https://guillaumekuc.github.io/blog — v2.1
 
 ## About
 
@@ -51,52 +51,66 @@ Jekyll requires Ruby and Bundler to run locally. If `bundle exec jekyll serve` d
 
 ## Workflow
 
-- Local dev: 'bundle exec jekyll serve'
-- '_config.yml' propagates w/ Jekyll/Liquid templating system.
-- 2 branches: developement & main
+- Local dev: `bundle exec jekyll serve`
+- `_config.yml` propagates via Jekyll/Liquid templating system
+- 2 branches: development & main
+
+## Configuration
+
+Key fields in `_config.yml`:
+- `version` — semantic version number, displayed in footer
+- `year` — copyright year, displayed in footer
+- `credits` — author/credits string (year and version composed around it in the template)
+- `colors` — theme color palette
 
 ### Features
 
-- Interactive Avatar: profile/logo + link
-	- Handmade svg emblem/logo
-	- Hover state
-- Back to Top Button
-	- Scroll triggered visibility
-	- Bounce animation on hover: squash and stretch
-	- Smooth scroll back to top
-- Search bar
-	- Expandable
-- Reading time indicator
-- Tags
-- Color theme switch
-	- 5 Hues of equal lightness value (Lab color mode): Teal, Coral, Olive, Lavander, Bronze
-	- Natural looking color variants (hue and value shifts mimicking shadows using precise Lab color mode calculations)
-	- Dynamic fav icon replacement using current active color
-	- Session persistence via localStorage
-- Copy Link button in blog articles
-- Image Lightbox
-	- Click any image or GIF in blog posts to view in full size
-	- Gallery navigation with keyboard arrows or on-screen buttons
-	- Touch/swipe support for mobile devices
-	- Automatic image wrapping (no need to modify markdown)
-	- Uses GLightbox library (loaded via CDN)
-- Abstract flowy Background
-	- Discreete Light grey gradient
-	- Midjourney generated abstract motif
-- Overall style
-	- Steps animations, approximating 12fps animation style (ref trad anim/retro games)
-	- Print design inspiration/Content first
-	- Half-tones
+- **Typography system** — brand fonts matching main portfolio website
+  - Crimson Pro (`--ffCrimson`) for body text and in-article headings (weights 400/500/600)
+  - M PLUS Rounded 1c (`--ffRounded`) for UI elements, sidebar, and post title (weights 300/400/500)
+  - Minor Third (×1.2) typographic scale from 18px base: 18 / 22 / 26 / 31 / 37px
+  - In-article headings decorated with ◈ prefix and theme-color `border-bottom`
+- **Three-column layout**
+  - Fixed sidebar (navigation, search, socials)
+  - Scrollable content column
+  - Fixed right column with background portrait artwork
+- **Feed page** — paginated post list with post headers (title, date, tags, reading time)
+- **Archive page** — posts grouped by year and month, collapsible
+- **Tags page** — posts grouped by tag, collapsible groups closed by default, tag search
+- **Interactive Avatar** — profile/logo + link
+  - Handmade SVG emblem/logo
+  - Hover state
+- **Back to Top Button**
+  - Scroll-triggered visibility
+  - Bounce animation on hover: squash and stretch
+  - Smooth scroll back to top
+- **Search bar** — expandable, live filtering
+- **Reading time indicator**
+- **Color theme switch**
+  - 5 hues of equal lightness value (Lab color mode): Teal, Coral, Olive, Lavender, Bronze
+  - Natural-looking color variants (hue and value shifts mimicking shadows using precise Lab color mode calculations)
+  - Dynamic favicon replacement using current active color
+  - Session persistence via localStorage
+- **Copy Link button** in blog articles
+- **Image Lightbox**
+  - Click any image or GIF in blog posts to view full size
+  - Gallery navigation with keyboard arrows or on-screen buttons
+  - Touch/swipe support for mobile devices
+  - Automatic image wrapping (no need to modify markdown)
+  - Uses GLightbox library (loaded via CDN)
+- **Background artwork** — Right-column illustration + abstract generated mid-column background
+- **Version tracking** — `version` and `year` fields in `_config.yml`, rendered in footer
+- **Overall style**
+  - Steps animations, approximating 12fps animation style (ref trad anim/retro games)
+  - Print design inspiration / content-first
+  - Half-tones
 
 ### Features Candidates
 
 - Dark theme
-- Keep alive animations
-- Animated background
+- Keep-alive animations
 - Lightness value slider
-- Tag pages
 - Pinned articles
-- Proper archive page
 - Shortcuts system
 - Color picker (copy colors under cursor)
 
@@ -107,4 +121,3 @@ Jekyll requires Ruby and Bundler to run locally. If `bundle exec jekyll serve` d
 ## Contact
 
 guillaume@guillaumekuc.com
-
