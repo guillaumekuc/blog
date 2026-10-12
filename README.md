@@ -57,21 +57,6 @@ Jekyll requires Ruby and Bundler to run locally. If `bundle exec jekyll serve` d
   - `develop`: all work happens here (posts, assets, site changes)
   - `main`: merge `develop` into it to publish. Every push to `main` deploys to GitHub Pages (`.github/workflows/jekyll.yml`)
 
-### Publishing a post from the PKM
-
-Posts are written in the Obsidian vault (`../../PKM`) and exported with `PKM/_scripts/publish_to_blog.py`:
-
-```powershell
-python _scripts/publish_to_blog.py "Inbox/+ Newsletter - 2026 September.md" --title "[Newsletter] ..." --tags newsletter,vilja --date 2026-10-12 --dry-run
-```
-
-- Takes the text after the note's `# Prose version` heading (or the whole note)
-- Copies `![[embeds]]` into `assets/<folder>/` (`newsletter-YYYYMM` for newsletters) and rewrites them as images / `<audio>` / `<video>`
-- Turns plain `[[wikilinks]]` into text and warns about them
-- Writes `_posts/<date>-<slug>.md` with front matter. It never touches git
-
-Then: review the diff, commit on `develop`, merge into `main` to publish.
-
 ## Configuration
 
 Key fields in `_config.yml`:
