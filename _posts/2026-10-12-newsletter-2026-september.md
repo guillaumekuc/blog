@@ -1,5 +1,5 @@
 ---
-title: "[Newsletter] Vilja Dossier Delivered, an Exploratory Track, and a Fretboard Tool for Reaper"
+title: "[Newsletter] Vilja Dossier Delivered, its Art and Music, and a Fretboard Tool for Reaper"
 author: guillaumekuc
 date: 2026-10-12
 categories: 
@@ -16,9 +16,9 @@ permalink:
 published: true
 ---
 
-## Writing again
+Bonjour,
 
-It has been a while since my last post. Over the past months I put the blinders on to finish the CNC proposal for Vilja before its deadline: single-task, single focus. Blog writing was deprioritized as a result. The project is now complete, so the writing returns.
+it has been a while since my last post. Over the past months I put the blinders on to finish the CNC proposal for Vilja before its deadline: single-task, single focus. Blog writing was deprioritized as a result. The project is now complete, so the writing returns.
 
 ## Vilja: the dossier
 
