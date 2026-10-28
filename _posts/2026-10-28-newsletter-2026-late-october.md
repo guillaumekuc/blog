@@ -1,5 +1,5 @@
 ---
-title: "[Newsletter] Prospecting with Claude Code, the Red Queen, and Artificial Scarcity"
+title: "[Newsletter] Prospection, Red Queen Dynamics, Artificial Scarcity"
 author: guillaumekuc
 date: 2026-10-28
 categories: 
@@ -8,6 +8,8 @@ tags:
   - newsletter
   - ai
   - tools
+  - economics
+  - prospection
 permalink: 
 published: true
 ---
@@ -18,7 +20,7 @@ The last few weeks since the last article have been dedicated to truly booting a
 
 Claude Code is proving useful for prospection: scheduled tasks, direct handling of files (my homemade CRM lives in Obsidian), complex web searches. It is speeding up or improving a lot of the prospecting process. List-building of candidate companies is efficient, and it really helps in getting to know more about the companies one is reaching out to, in a more manageable amount of time.
 
-![The homemade CRM in Obsidian: a base of US tabletop publishers scored by fit, timing, payoff and engagement (company names and segments blurred)](/blog/assets/newsletter-202610/crm-us-tabletop.gif)
+![Obsidian artisanal CRM](/blog/assets/newsletter-202610/crm-us-tabletop.gif)
 
 However, these gains are more than nullified by the Red Queen dynamics at play: an arms race where everyone has to keep running faster just to stay in the same place. Because everybody can volume-send more easily, inboxes reach saturation fast and people tune out. I came across an article sharing its data and claiming that [cold email is dying](https://sales.co/research/cold-email-is-dying). The human reply rate per contact went from 2.36% (Apr 2025) to 0.45% (Sep 2026), about 5× lower; the positive reply rate from 0.72% to 0.18%, almost 4× lower. Something else I found interesting in their analysis: personalizing the mail pickup lines had no effect, or even an adverse effect. An AI-personalized first line got 0.53% replies vs 1.00% for a plain template. They tried swapping content in various manners; the writing changes had no effect.
 
