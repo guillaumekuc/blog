@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "music-notebook": "node _scripts/copy-music-notebook.mjs",
+    "postinstall": "node _scripts/copy-music-notebook.mjs"
+  },
   "dependencies": {
-    "simple-jekyll-search": "^1.10.0"
+    "simple-jekyll-search": "^1.10.0",
+    "music-notebook": "github:guillaumekuc/music-notebook#v1.0.0"
   }
 }
