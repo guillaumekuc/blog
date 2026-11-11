@@ -9,3 +9,11 @@ layout: default
 <p><a class="copylink" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Copy Link"><i class="fa-solid fa-link"></i></a></p>
 
 <script src="{{ '/assets/js/copy-link.js' | relative_url }}"></script>
+
+{% if content contains 'language-fretboard' or content contains 'language-notation' or content contains 'language-progression' %}
+<!-- ```fretboard, ```notation and ```progression blocks become Music Notebook drawings; without JavaScript the code stays. -->
+<script type="module">
+  import { renderAll } from '{{ "/assets/js/music-notebook/music-notebook.js" | relative_url }}';
+  renderAll();
+</script>
+{% endif %}
