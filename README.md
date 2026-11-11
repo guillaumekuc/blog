@@ -53,9 +53,9 @@ Jekyll requires Ruby and Bundler to run locally. If `bundle exec jekyll serve` d
 
 - Local dev: `bundle exec jekyll serve`
 - `_config.yml` propagates via Jekyll/Liquid templating system
-- 2 branches:
-  - `develop`: all work happens here (posts, assets, site changes)
-  - `main`: merge `develop` into it to publish. Every push to `main` deploys to GitHub Pages (`.github/workflows/jekyll.yml`)
+- Branches: `feature/*` → `main` → `release/*` → `production`
+  - `main`: integration; work (posts, assets, site changes) is merged here
+  - `production`: merge a tested release into it to publish. Every push to `production` deploys to GitHub Pages (`.github/workflows/jekyll.yml`)
 
 ## Configuration
 
